@@ -362,6 +362,26 @@ def analyse_fixture(fix: dict, home_stats: dict, away_stats: dict,
 
     builder = assemble_builder(bets)
 
+    # When no odds are available, still show model projections as informational output
+    p_home_win = sum(
+        poisson_pmf(h, lam_home) * sum(poisson_pmf(a, lam_away) for a in range(h))
+        for h in range(15)
+    )
+    p_away_win = sum(
+        poisson_pmf(a, lam_away) * sum(poisson_pmf(h, lam_home) for h in range(a))
+        for a in range(15)
+    )
+    p_draw_val = 1 - p_home_win - p_away_win
+
+    model_projections = {
+        "btts_yes": round(p_btts(lam_home, lam_away), 4),
+        "over_2_5_goals": round(p_over(2.5, lam_total), 4),
+        "over_1_5_goals": round(p_over(1.5, lam_total), 4),
+        "home_win": round(p_home_win, 4),
+        "draw": round(p_draw_val, 4),
+        "away_win": round(p_away_win, 4),
+    }
+
     return {
         "fixture_id": fix["fixture_id"],
         "home_team": fix["home_team"],
@@ -375,6 +395,7 @@ def analyse_fixture(fix: dict, home_stats: dict, away_stats: dict,
             "total_expected_goals": round(lam_total, 3),
             "expected_cards": round(lam_cards, 3),
         },
+        "model_projections": model_projections,
         "using_xg": using_xg,
         "bets": bets,
         "builder": builder,

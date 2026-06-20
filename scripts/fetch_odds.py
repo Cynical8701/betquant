@@ -100,6 +100,24 @@ def parse_bookmaker_odds(event: dict) -> dict:
     return markets
 
 
+def list_active_sports(api_key: str) -> set:
+    """Return the set of active sport keys from The Odds API."""
+    try:
+        resp = requests.get(
+            f"{ODDS_API_BASE}/sports",
+            params={"apiKey": api_key},
+            timeout=10
+        )
+        resp.raise_for_status()
+        active = {s["key"] for s in resp.json() if s.get("active")}
+        soccer = sorted(k for k in active if "soccer" in k)
+        log.info(f"Active soccer sport keys: {soccer}")
+        return active
+    except requests.RequestException as e:
+        log.warning(f"Could not list sports: {e}")
+        return set()
+
+
 def fetch_sport_odds(sport_key: str, api_key: str) -> list:
     params = {
         "apiKey": api_key,
@@ -155,6 +173,9 @@ def main(dry_run: bool = False):
     # Build a set of unique odds_api_keys from the fixtures we actually fetched
     sport_keys_needed = {f["odds_api_key"] for f in fixtures}
 
+    # Discover what sport keys are actually active (costs 1 request, no credits)
+    active_sports = list_active_sports(api_key)
+
     # Fetch odds per sport (one call per sport = very credit-efficient)
     events_by_sport: dict[str, list] = {}
     for league in config["leagues"]:
@@ -162,6 +183,9 @@ def main(dry_run: bool = False):
         if sport_key not in sport_keys_needed:
             continue
         if not league["enabled"]:
+            continue
+        if active_sports and sport_key not in active_sports:
+            log.warning(f"Skipping {league['name']}: '{sport_key}' not active on The Odds API")
             continue
         log.info(f"Fetching odds: {league['name']} ({sport_key})")
         events_by_sport[sport_key] = fetch_sport_odds(sport_key, api_key)

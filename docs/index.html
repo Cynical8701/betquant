@@ -239,6 +239,36 @@
       font-style: italic;
     }
 
+    /* ── Model-only projections (no odds available) ── */
+    .projections {
+      margin: 10px 14px 14px;
+      background: rgba(124,131,255,0.06);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+    .projections-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .proj-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 8px;
+    }
+    .proj-item {
+      background: var(--surface2);
+      border-radius: 6px;
+      padding: 8px 10px;
+      text-align: center;
+    }
+    .proj-label { font-size: 0.72rem; color: var(--muted); margin-bottom: 4px; }
+    .proj-value { font-size: 1rem; font-weight: 700; color: var(--text); }
+
     /* ── Empty / loading states ── */
     .loading, .empty {
       text-align: center;
@@ -354,6 +384,28 @@
     </div>`;
   }
 
+  function renderProjections(proj) {
+    if (!proj) return '';
+    const items = [
+      { label: 'Home Win',    value: proj.home_win },
+      { label: 'Draw',        value: proj.draw },
+      { label: 'Away Win',    value: proj.away_win },
+      { label: 'BTTS Yes',    value: proj.btts_yes },
+      { label: 'Over 1.5',    value: proj.over_1_5_goals },
+      { label: 'Over 2.5',    value: proj.over_2_5_goals },
+    ];
+    const itemsHtml = items.map(i =>
+      `<div class="proj-item">
+        <div class="proj-label">${i.label}</div>
+        <div class="proj-value">${((i.value || 0) * 100).toFixed(0)}%</div>
+      </div>`
+    ).join('');
+    return `<div class="projections">
+      <div class="projections-title">Model Projections (no odds available)</div>
+      <div class="proj-grid">${itemsHtml}</div>
+    </div>`;
+  }
+
   function renderBuilder(builder) {
     if (!builder || !builder.legs || builder.legs.length < 2) return '';
     const legsHtml = builder.legs.map(renderLeg).join('');
@@ -395,7 +447,7 @@
       : '';
 
     const noOddsMsg = !fix.odds_available
-      ? '<div class="no-odds">No pre-match odds available for this fixture.</div>'
+      ? renderProjections(fix.model_projections)
       : '';
 
     return `<div class="fixture-card" data-fixture-id="${fix.fixture_id}"
