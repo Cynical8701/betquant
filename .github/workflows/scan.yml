@@ -1,0 +1,64 @@
+name: BetQuant Daily Scan
+
+on:
+  schedule:
+    - cron: '0 7 * * *'   # 07:00 UTC daily (adjust to taste)
+  workflow_dispatch:        # allow manual trigger from the GitHub UI
+
+permissions:
+  contents: write           # needed to commit latest.json back to the repo
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # ── 1. Fetch upcoming fixtures ───────────────────────────────────────
+      - name: Fetch fixtures
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: python scripts/fetch_fixtures.py
+
+      # ── 2. Fetch team & player stats ────────────────────────────────────
+      - name: Fetch stats
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: python scripts/fetch_stats.py
+
+      # ── 3. Fetch pre-match odds ──────────────────────────────────────────
+      - name: Fetch odds
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python scripts/fetch_odds.py
+
+      # ── 4. Run statistical edge analysis ────────────────────────────────
+      - name: Analyse fixtures
+        run: python scripts/analyze.py
+
+      # ── 5. Commit updated output back to the repo ────────────────────────
+      - name: Commit latest.json
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/latest.json
+          git diff --cached --quiet \
+            && echo "No changes to commit." \
+            || git commit -m "chore: update bet scan [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+          git push
+
+      # ── 6. Send Discord notification ─────────────────────────────────────
+      - name: Notify Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python scripts/notify.py

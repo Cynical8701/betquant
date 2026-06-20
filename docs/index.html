@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BetQuant Dashboard</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0d0f18;
+      --surface:  #151824;
+      --surface2: #1e2235;
+      --border:   #2a2f4a;
+      --text:     #e2e8f0;
+      --muted:    #8892b0;
+      --tier1:    #00c853;
+      --tier2:    #ffd600;
+      --accent:   #7c83ff;
+      --danger:   #ff4d6d;
+      --odds:     #82aaff;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-size: 15px;
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .logo { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.5px; }
+    .logo span { color: var(--tier1); }
+    .meta { color: var(--muted); font-size: 0.82rem; text-align: right; }
+
+    /* ── Summary bar ── */
+    .summary-bar {
+      background: var(--surface2);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 24px;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .stat-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+    }
+    .stat-chip .count {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+    .stat-chip.t1 .count { color: var(--tier1); }
+    .stat-chip.t2 .count { color: var(--tier2); }
+    .stat-chip.fx .count { color: var(--accent); }
+
+    /* ── Filters ── */
+    .filters {
+      padding: 14px 24px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+    }
+    .filter-btn {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 5px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.82rem;
+      transition: all 0.15s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      border-color: var(--accent);
+      color: var(--text);
+    }
+    .filter-btn.active { background: rgba(124,131,255,0.15); }
+
+    /* ── Main layout ── */
+    main { padding: 20px 24px; max-width: 960px; margin: 0 auto; }
+
+    /* ── Fixture card ── */
+    .fixture-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+    .fixture-header {
+      background: var(--surface2);
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .fixture-teams {
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+    .fixture-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+    .fixture-badges { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+    .badge {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge-league { background: rgba(124,131,255,0.2); color: var(--accent); }
+    .badge-xg    { background: rgba(0,200,83,0.15);   color: var(--tier1);  }
+    .badge-nodata { background: rgba(255,214,0,0.15);  color: var(--tier2);  }
+
+    /* ── Lambdas row ── */
+    .lambdas {
+      padding: 8px 18px;
+      display: flex;
+      gap: 20px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      background: rgba(0,0,0,0.15);
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .lambdas span b { color: var(--text); }
+
+    /* ── Bets section ── */
+    .bets-section { padding: 4px 0; }
+    .tier-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 8px 18px 4px;
+      color: var(--muted);
+    }
+    .tier-label.t1 { color: var(--tier1); }
+    .tier-label.t2 { color: var(--tier2); }
+
+    .bet-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      padding: 10px 18px;
+      border-top: 1px solid var(--border);
+      align-items: start;
+    }
+    .bet-row:first-of-type { border-top: none; }
+    .bet-label { font-weight: 600; font-size: 0.9rem; margin-bottom: 3px; }
+    .bet-reason { font-size: 0.8rem; color: var(--muted); }
+    .bet-right  { text-align: right; white-space: nowrap; }
+    .bet-odds   { font-size: 1.05rem; font-weight: 700; color: var(--odds); }
+    .bet-edge   { font-size: 0.78rem; font-weight: 600; margin-top: 2px; }
+    .bet-edge.t1 { color: var(--tier1); }
+    .bet-edge.t2 { color: var(--tier2); }
+    .bet-probs  {
+      font-size: 0.74rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* ── Builder section ── */
+    .builder {
+      margin: 10px 14px 14px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+    .builder-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .builder-legs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+    .leg-chip {
+      background: rgba(124,131,255,0.1);
+      border: 1px solid rgba(124,131,255,0.25);
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 0.78rem;
+    }
+    .leg-chip .leg-odds { color: var(--odds); font-weight: 600; }
+    .leg-chip .leg-tier1 { color: var(--tier1); }
+    .leg-chip .leg-tier2 { color: var(--tier2); }
+    .builder-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .builder-combined {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--odds);
+    }
+    .builder-corr {
+      font-size: 0.74rem;
+      color: var(--tier2);
+    }
+
+    /* ── No-odds notice ── */
+    .no-odds {
+      padding: 12px 18px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* ── Empty / loading states ── */
+    .loading, .empty {
+      text-align: center;
+      padding: 60px 24px;
+      color: var(--muted);
+    }
+    .loading::after {
+      content: '';
+      display: inline-block;
+      width: 28px; height: 28px;
+      border: 3px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-top: 16px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Disclaimer ── */
+    .disclaimer {
+      margin: 30px auto;
+      max-width: 960px;
+      padding: 0 24px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+    }
+
+    @media (max-width: 600px) {
+      header, .summary-bar, .filters, main { padding-left: 14px; padding-right: 14px; }
+      .bet-row { grid-template-columns: 1fr; }
+      .bet-right { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="logo">Bet<span>Quant</span></div>
+    <div class="meta">Statistical edge detection · Pre-match only</div>
+  </div>
+  <div class="meta" id="last-updated">Loading…</div>
+</header>
+
+<div class="summary-bar" id="summary-bar">
+  <div class="stat-chip fx"><span class="count" id="total-fixtures">–</span><span>fixtures</span></div>
+  <div class="stat-chip t1"><span class="count" id="total-t1">–</span><span>Tier-1 edges</span></div>
+  <div class="stat-chip t2"><span class="count" id="total-t2">–</span><span>Tier-2 picks</span></div>
+</div>
+
+<div class="filters">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="tier1">Tier 1 only</button>
+  <button class="filter-btn" data-filter="builders">Has builder</button>
+  <button class="filter-btn" data-filter="odds">Has odds</button>
+</div>
+
+<main id="main-content">
+  <div class="loading" id="loading-state"><br>Fetching latest data…</div>
+</main>
+
+<div class="disclaimer">
+  <strong>Responsible use:</strong> BetQuant is a statistical decision-support tool. Model probabilities are estimates derived from historical data and carry uncertainty. Past statistical patterns do not guarantee future outcomes. Betting carries real financial risk — never stake more than you can afford to lose. This tool does not constitute financial or betting advice.
+</div>
+
+<script>
+  const DATA_URL = './latest.json';
+
+  let allFixtures = [];
+  let activeFilter = 'all';
+
+  function formatKickoff(iso) {
+    const d = new Date(iso);
+    return d.toLocaleString('en-GB', {
+      weekday: 'short', day: 'numeric', month: 'short',
+      hour: '2-digit', minute: '2-digit', timeZone: 'UTC'
+    }) + ' UTC';
+  }
+
+  function edgeLabel(edge) {
+    const pct = (edge * 100).toFixed(1);
+    return edge >= 0 ? `+${pct}pp edge` : `${pct}pp`;
+  }
+
+  function renderLeg(leg) {
+    const tierClass = leg.tier === 1 ? 'leg-tier1' : 'leg-tier2';
+    return `<span class="leg-chip">
+      <span class="${tierClass}">●</span>
+      ${escHtml(leg.label)}
+      <span class="leg-odds">@${leg.odds.toFixed(2)}</span>
+    </span>`;
+  }
+
+  function renderBet(bet) {
+    const tierClass = bet.tier === 1 ? 't1' : 't2';
+    const oddsStr = bet.best_odds > 0 ? `@${bet.best_odds.toFixed(2)}` : 'n/a';
+    const bkStr = bet.best_bookmaker ? ` <span style="color:var(--muted);font-size:0.72rem">(${escHtml(bet.best_bookmaker)})</span>` : '';
+    return `<div class="bet-row">
+      <div>
+        <div class="bet-label">${escHtml(bet.label)}</div>
+        <div class="bet-reason">${escHtml(bet.reason)}</div>
+        <div class="bet-probs">
+          Model ${(bet.model_probability * 100).toFixed(1)}% vs
+          Market ${(bet.market_probability_devigged * 100).toFixed(1)}% (de-vigged)
+        </div>
+      </div>
+      <div class="bet-right">
+        <div class="bet-odds">${oddsStr}${bkStr}</div>
+        <div class="bet-edge ${tierClass}">${edgeLabel(bet.edge)}</div>
+      </div>
+    </div>`;
+  }
+
+  function renderBuilder(builder) {
+    if (!builder || !builder.legs || builder.legs.length < 2) return '';
+    const legsHtml = builder.legs.map(renderLeg).join('');
+    const corrHtml = builder.correlation_note
+      ? `<div class="builder-corr">⚠ ${escHtml(builder.correlation_note)}</div>`
+      : '';
+    return `<div class="builder">
+      <div class="builder-title">Bet Builder</div>
+      <div class="builder-legs">${legsHtml}</div>
+      <div class="builder-footer">
+        <span class="builder-combined">Combined: ${builder.combined_odds.toFixed(2)}</span>
+        ${corrHtml}
+      </div>
+    </div>`;
+  }
+
+  function renderFixture(fix) {
+    const bets = fix.bets || [];
+    const tier1 = bets.filter(b => b.tier === 1);
+    const tier2 = bets.filter(b => b.tier === 2);
+
+    const dataLabel = fix.using_xg
+      ? '<span class="badge badge-xg">xG</span>'
+      : '<span class="badge badge-nodata">goal avg</span>';
+
+    const lambdas = fix.model_lambdas || {};
+    const lambdaRow = `<div class="lambdas">
+      <span>xpG home: <b>${lambdas.home_expected_goals ?? '—'}</b></span>
+      <span>xpG away: <b>${lambdas.away_expected_goals ?? '—'}</b></span>
+      <span>total: <b>${lambdas.total_expected_goals ?? '—'}</b></span>
+      <span>cards: <b>${lambdas.expected_cards ?? '—'}</b></span>
+    </div>`;
+
+    const t1Html = tier1.length
+      ? `<div class="tier-label t1">Tier 1 — Clear Edge</div>${tier1.map(renderBet).join('')}`
+      : '';
+    const t2Html = tier2.length
+      ? `<div class="tier-label t2">Tier 2 — Fair Price</div>${tier2.map(renderBet).join('')}`
+      : '';
+
+    const noOddsMsg = !fix.odds_available
+      ? '<div class="no-odds">No pre-match odds available for this fixture.</div>'
+      : '';
+
+    return `<div class="fixture-card" data-fixture-id="${fix.fixture_id}"
+         data-has-t1="${tier1.length > 0}"
+         data-has-builder="${!!(fix.builder && fix.builder.legs && fix.builder.legs.length >= 2)}"
+         data-has-odds="${fix.odds_available}">
+      <div class="fixture-header">
+        <div>
+          <div class="fixture-teams">${escHtml(fix.home_team)} <span style="color:var(--muted)">vs</span> ${escHtml(fix.away_team)}</div>
+          <div class="fixture-meta">${formatKickoff(fix.kickoff_utc)}</div>
+        </div>
+        <div class="fixture-badges">
+          <span class="badge badge-league">${escHtml(fix.league)}</span>
+          ${dataLabel}
+        </div>
+      </div>
+      ${lambdaRow}
+      <div class="bets-section">
+        ${t1Html}
+        ${t2Html}
+        ${noOddsMsg}
+        ${!t1Html && !t2Html && !noOddsMsg ? '<div class="no-odds">No edges found for this fixture.</div>' : ''}
+      </div>
+      ${renderBuilder(fix.builder)}
+    </div>`;
+  }
+
+  function applyFilter(filter) {
+    activeFilter = filter;
+    document.querySelectorAll('.filter-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.filter === filter);
+    });
+    document.querySelectorAll('.fixture-card').forEach(card => {
+      let show = true;
+      if (filter === 'tier1') show = card.dataset.hasT1 === 'true';
+      if (filter === 'builders') show = card.dataset.hasBuilder === 'true';
+      if (filter === 'odds') show = card.dataset.hasOdds === 'true';
+      card.style.display = show ? '' : 'none';
+    });
+  }
+
+  function escHtml(str) {
+    return String(str ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  async function load() {
+    const main = document.getElementById('main-content');
+    try {
+      const resp = await fetch(DATA_URL + '?t=' + Date.now());
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      const data = await resp.json();
+
+      document.getElementById('last-updated').textContent =
+        'Last updated: ' + data.generated_at.replace('T', ' ').slice(0, 16) + ' UTC'
+        + (data.dry_run ? ' (DRY RUN)' : '');
+      document.getElementById('total-fixtures').textContent = data.total_fixtures ?? 0;
+      document.getElementById('total-t1').textContent = data.total_tier1_bets ?? 0;
+      document.getElementById('total-t2').textContent = data.total_tier2_bets ?? 0;
+
+      allFixtures = data.fixtures || [];
+
+      if (!allFixtures.length) {
+        main.innerHTML = '<div class="empty">No upcoming fixtures found. Check back later or trigger a manual scan.</div>';
+        return;
+      }
+
+      main.innerHTML = allFixtures.map(renderFixture).join('');
+      applyFilter(activeFilter);
+
+    } catch (err) {
+      main.innerHTML = `<div class="empty">Failed to load data: ${escHtml(err.message)}<br><br>
+        <small>Make sure the workflow has run at least once and <code>latest.json</code> exists in the docs/ folder.</small>
+      </div>`;
+    }
+  }
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
+  });
+
+  load();
+</script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+{
+  "42": {
+    "team_id": 42,
+    "team_name": "Arsenal",
+    "games_played": 28,
+    "goals_for_avg": 2.18,
+    "goals_against_avg": 0.89,
+    "shots_on_target_for_pg": 5.4,
+    "shots_on_target_against_pg": 2.9,
+    "yellow_cards_avg": 1.61,
+    "red_cards_avg": 0.04,
+    "clean_sheet_rate": 0.39,
+    "failed_to_score_rate": 0.07,
+    "xg_available": true,
+    "xg_for_avg": 2.05,
+    "xg_against_avg": 0.91,
+    "top_scorers": [
+      {
+        "player_id": 521,
+        "name": "Bukayo Saka",
+        "goals": 14,
+        "goals_per90": 0.71,
+        "shots_on_target_per90": 2.3,
+        "minutes": 1776
+      },
+      {
+        "player_id": 184,
+        "name": "Kai Havertz",
+        "goals": 11,
+        "goals_per90": 0.56,
+        "shots_on_target_per90": 1.8,
+        "minutes": 1764
+      }
+    ]
+  },
+  "40": {
+    "team_id": 40,
+    "team_name": "Liverpool",
+    "games_played": 28,
+    "goals_for_avg": 2.04,
+    "goals_against_avg": 1.07,
+    "shots_on_target_for_pg": 5.1,
+    "shots_on_target_against_pg": 3.2,
+    "yellow_cards_avg": 1.43,
+    "red_cards_avg": 0.07,
+    "clean_sheet_rate": 0.32,
+    "failed_to_score_rate": 0.07,
+    "xg_available": true,
+    "xg_for_avg": 1.92,
+    "xg_against_avg": 1.08,
+    "top_scorers": [
+      {
+        "player_id": 306,
+        "name": "Mohamed Salah",
+        "goals": 18,
+        "goals_per90": 0.82,
+        "shots_on_target_per90": 2.7,
+        "minutes": 1980
+      },
+      {
+        "player_id": 280,
+        "name": "Darwin Nunez",
+        "goals": 9,
+        "goals_per90": 0.55,
+        "shots_on_target_per90": 1.9,
+        "minutes": 1476
+      }
+    ]
+  },
+  "541": {
+    "team_id": 541,
+    "team_name": "Real Madrid",
+    "games_played": 27,
+    "goals_for_avg": 2.37,
+    "goals_against_avg": 0.96,
+    "shots_on_target_for_pg": 6.1,
+    "shots_on_target_against_pg": 2.7,
+    "yellow_cards_avg": 2.11,
+    "red_cards_avg": 0.07,
+    "clean_sheet_rate": 0.41,
+    "failed_to_score_rate": 0.07,
+    "xg_available": true,
+    "xg_for_avg": 2.21,
+    "xg_against_avg": 0.98,
+    "top_scorers": [
+      {
+        "player_id": 874,
+        "name": "Kylian Mbappe",
+        "goals": 20,
+        "goals_per90": 0.89,
+        "shots_on_target_per90": 2.9,
+        "minutes": 2016
+      },
+      {
+        "player_id": 522,
+        "name": "Vinicius Jr",
+        "goals": 13,
+        "goals_per90": 0.63,
+        "shots_on_target_per90": 2.1,
+        "minutes": 1860
+      }
+    ]
+  },
+  "529": {
+    "team_id": 529,
+    "team_name": "Barcelona",
+    "games_played": 27,
+    "goals_for_avg": 2.19,
+    "goals_against_avg": 1.15,
+    "shots_on_target_for_pg": 5.8,
+    "shots_on_target_against_pg": 3.1,
+    "yellow_cards_avg": 2.48,
+    "red_cards_avg": 0.11,
+    "clean_sheet_rate": 0.30,
+    "failed_to_score_rate": 0.04,
+    "xg_available": true,
+    "xg_for_avg": 2.04,
+    "xg_against_avg": 1.09,
+    "top_scorers": [
+      {
+        "player_id": 1100,
+        "name": "Robert Lewandowski",
+        "goals": 19,
+        "goals_per90": 0.87,
+        "shots_on_target_per90": 2.6,
+        "minutes": 1962
+      },
+      {
+        "player_id": 1101,
+        "name": "Lamine Yamal",
+        "goals": 10,
+        "goals_per90": 0.52,
+        "shots_on_target_per90": 1.7,
+        "minutes": 1728
+      }
+    ]
+  },
+  "157": {
+    "team_id": 157,
+    "team_name": "Bayern Munich",
+    "games_played": 26,
+    "goals_for_avg": 2.85,
+    "goals_against_avg": 1.04,
+    "shots_on_target_for_pg": 7.2,
+    "shots_on_target_against_pg": 3.0,
+    "yellow_cards_avg": 1.77,
+    "red_cards_avg": 0.04,
+    "clean_sheet_rate": 0.42,
+    "failed_to_score_rate": 0.04,
+    "xg_available": true,
+    "xg_for_avg": 2.68,
+    "xg_against_avg": 1.06,
+    "top_scorers": [
+      {
+        "player_id": 286,
+        "name": "Harry Kane",
+        "goals": 24,
+        "goals_per90": 1.04,
+        "shots_on_target_per90": 3.2,
+        "minutes": 2088
+      },
+      {
+        "player_id": 287,
+        "name": "Leroy Sane",
+        "goals": 10,
+        "goals_per90": 0.54,
+        "shots_on_target_per90": 1.8,
+        "minutes": 1674
+      }
+    ]
+  },
+  "165": {
+    "team_id": 165,
+    "team_name": "Borussia Dortmund",
+    "games_played": 26,
+    "goals_for_avg": 1.73,
+    "goals_against_avg": 1.54,
+    "shots_on_target_for_pg": 4.6,
+    "shots_on_target_against_pg": 4.1,
+    "yellow_cards_avg": 1.96,
+    "red_cards_avg": 0.08,
+    "clean_sheet_rate": 0.23,
+    "failed_to_score_rate": 0.12,
+    "xg_available": true,
+    "xg_for_avg": 1.61,
+    "xg_against_avg": 1.48,
+    "top_scorers": [
+      {
+        "player_id": 1200,
+        "name": "Serhou Guirassy",
+        "goals": 16,
+        "goals_per90": 0.74,
+        "shots_on_target_per90": 2.4,
+        "minutes": 1944
+      },
+      {
+        "player_id": 1201,
+        "name": "Karim Adeyemi",
+        "goals": 8,
+        "goals_per90": 0.48,
+        "shots_on_target_per90": 1.6,
+        "minutes": 1500
+      }
+    ]
+  }
+}

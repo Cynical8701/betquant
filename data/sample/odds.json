@@ -1,0 +1,182 @@
+{
+  "1001": {
+    "fixture_id": 1001,
+    "home_team": "Arsenal",
+    "away_team": "Liverpool",
+    "event_id": "sample-epl-1001",
+    "commence_time": "2026-07-12T15:00:00Z",
+    "markets": {
+      "h2h": {
+        "home": [
+          {"bookmaker": "bet365", "odds": 2.10},
+          {"bookmaker": "betfair", "odds": 2.15},
+          {"bookmaker": "unibet", "odds": 2.12}
+        ],
+        "draw": [
+          {"bookmaker": "bet365", "odds": 3.40},
+          {"bookmaker": "betfair", "odds": 3.50},
+          {"bookmaker": "unibet", "odds": 3.45}
+        ],
+        "away": [
+          {"bookmaker": "bet365", "odds": 3.60},
+          {"bookmaker": "betfair", "odds": 3.70},
+          {"bookmaker": "unibet", "odds": 3.65}
+        ]
+      },
+      "btts": {
+        "yes": [
+          {"bookmaker": "bet365", "odds": 1.72},
+          {"bookmaker": "betfair", "odds": 1.75},
+          {"bookmaker": "unibet", "odds": 1.73}
+        ],
+        "no": [
+          {"bookmaker": "bet365", "odds": 2.10},
+          {"bookmaker": "betfair", "odds": 2.12},
+          {"bookmaker": "unibet", "odds": 2.08}
+        ]
+      },
+      "totals": {
+        "over_2.5": [
+          {"bookmaker": "bet365", "odds": 1.80},
+          {"bookmaker": "betfair", "odds": 1.83},
+          {"bookmaker": "unibet", "odds": 1.81}
+        ],
+        "under_2.5": [
+          {"bookmaker": "bet365", "odds": 2.00},
+          {"bookmaker": "betfair", "odds": 2.05},
+          {"bookmaker": "unibet", "odds": 2.02}
+        ],
+        "over_3.5": [
+          {"bookmaker": "bet365", "odds": 3.20},
+          {"bookmaker": "betfair", "odds": 3.30},
+          {"bookmaker": "unibet", "odds": 3.25}
+        ],
+        "under_3.5": [
+          {"bookmaker": "bet365", "odds": 1.35},
+          {"bookmaker": "betfair", "odds": 1.38},
+          {"bookmaker": "unibet", "odds": 1.36}
+        ]
+      }
+    }
+  },
+  "1002": {
+    "fixture_id": 1002,
+    "home_team": "Real Madrid",
+    "away_team": "Barcelona",
+    "event_id": "sample-laliga-1002",
+    "commence_time": "2026-07-13T19:00:00Z",
+    "markets": {
+      "h2h": {
+        "home": [
+          {"bookmaker": "bet365", "odds": 2.00},
+          {"bookmaker": "betfair", "odds": 2.05},
+          {"bookmaker": "unibet", "odds": 2.02}
+        ],
+        "draw": [
+          {"bookmaker": "bet365", "odds": 3.50},
+          {"bookmaker": "betfair", "odds": 3.60},
+          {"bookmaker": "unibet", "odds": 3.55}
+        ],
+        "away": [
+          {"bookmaker": "bet365", "odds": 3.80},
+          {"bookmaker": "betfair", "odds": 3.90},
+          {"bookmaker": "unibet", "odds": 3.85}
+        ]
+      },
+      "btts": {
+        "yes": [
+          {"bookmaker": "bet365", "odds": 1.80},
+          {"bookmaker": "betfair", "odds": 1.83},
+          {"bookmaker": "unibet", "odds": 1.81}
+        ],
+        "no": [
+          {"bookmaker": "bet365", "odds": 2.00},
+          {"bookmaker": "betfair", "odds": 2.05},
+          {"bookmaker": "unibet", "odds": 2.02}
+        ]
+      },
+      "totals": {
+        "over_2.5": [
+          {"bookmaker": "bet365", "odds": 1.72},
+          {"bookmaker": "betfair", "odds": 1.75},
+          {"bookmaker": "unibet", "odds": 1.73}
+        ],
+        "under_2.5": [
+          {"bookmaker": "bet365", "odds": 2.10},
+          {"bookmaker": "betfair", "odds": 2.12},
+          {"bookmaker": "unibet", "odds": 2.08}
+        ],
+        "over_3.5": [
+          {"bookmaker": "bet365", "odds": 2.60},
+          {"bookmaker": "betfair", "odds": 2.65},
+          {"bookmaker": "unibet", "odds": 2.62}
+        ],
+        "under_3.5": [
+          {"bookmaker": "bet365", "odds": 1.50},
+          {"bookmaker": "betfair", "odds": 1.53},
+          {"bookmaker": "unibet", "odds": 1.51}
+        ]
+      }
+    }
+  },
+  "1003": {
+    "fixture_id": 1003,
+    "home_team": "Bayern Munich",
+    "away_team": "Borussia Dortmund",
+    "event_id": "sample-bundesliga-1003",
+    "commence_time": "2026-07-14T18:30:00Z",
+    "markets": {
+      "h2h": {
+        "home": [
+          {"bookmaker": "bet365", "odds": 1.65},
+          {"bookmaker": "betfair", "odds": 1.67},
+          {"bookmaker": "unibet", "odds": 1.66}
+        ],
+        "draw": [
+          {"bookmaker": "bet365", "odds": 4.00},
+          {"bookmaker": "betfair", "odds": 4.10},
+          {"bookmaker": "unibet", "odds": 4.05}
+        ],
+        "away": [
+          {"bookmaker": "bet365", "odds": 5.50},
+          {"bookmaker": "betfair", "odds": 5.70},
+          {"bookmaker": "unibet", "odds": 5.60}
+        ]
+      },
+      "btts": {
+        "yes": [
+          {"bookmaker": "bet365", "odds": 1.90},
+          {"bookmaker": "betfair", "odds": 1.93},
+          {"bookmaker": "unibet", "odds": 1.91}
+        ],
+        "no": [
+          {"bookmaker": "bet365", "odds": 1.90},
+          {"bookmaker": "betfair", "odds": 1.93},
+          {"bookmaker": "unibet", "odds": 1.91}
+        ]
+      },
+      "totals": {
+        "over_2.5": [
+          {"bookmaker": "bet365", "odds": 1.57},
+          {"bookmaker": "betfair", "odds": 1.60},
+          {"bookmaker": "unibet", "odds": 1.58}
+        ],
+        "under_2.5": [
+          {"bookmaker": "bet365", "odds": 2.40},
+          {"bookmaker": "betfair", "odds": 2.45},
+          {"bookmaker": "unibet", "odds": 2.42}
+        ],
+        "over_3.5": [
+          {"bookmaker": "bet365", "odds": 2.10},
+          {"bookmaker": "betfair", "odds": 2.15},
+          {"bookmaker": "unibet", "odds": 2.12}
+        ],
+        "under_3.5": [
+          {"bookmaker": "bet365", "odds": 1.72},
+          {"bookmaker": "betfair", "odds": 1.75},
+          {"bookmaker": "unibet", "odds": 1.73}
+        ]
+      }
+    }
+  }
+}
