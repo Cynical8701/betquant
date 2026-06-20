@@ -49,7 +49,14 @@ def fetch_league_fixtures(league_id: int, api_key: str, days_ahead: int, season:
             log.warning(f"Rate limited for league {league_id} — skipping")
             return []
         resp.raise_for_status()
-        return resp.json().get("response", [])
+        data = resp.json()
+        errors = data.get("errors")
+        if errors:
+            log.error(f"API error for league {league_id}: {errors}")
+            return []
+        results = data.get("results", 0)
+        log.info(f"  API returned {results} fixtures for league {league_id} (params: {params})")
+        return data.get("response", [])
     except requests.RequestException as e:
         log.error(f"Failed to fetch fixtures for league {league_id}: {e}")
         return []
