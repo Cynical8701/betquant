@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T20:25:28.226262+00:00",
+  "generated_at": "2026-06-20T20:34:09.531341+00:00",
   "dry_run": false,
   "total_fixtures": 20,
   "total_tier1_bets": 0,
@@ -17,6 +17,14 @@
         "away_expected_goals": 1.0,
         "total_expected_goals": 4.78,
         "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.6177,
+        "over_2_5_goals": 0.8556,
+        "over_1_5_goals": 0.9515,
+        "home_win": 0.8588,
+        "draw": 0.0862,
+        "away_win": 0.055
       },
       "using_xg": false,
       "bets": [],
@@ -36,6 +44,14 @@
         "total_expected_goals": 5.12,
         "expected_cards": 3.6
       },
+      "model_projections": {
+        "btts_yes": 0.7779,
+        "over_2_5_goals": 0.8851,
+        "over_1_5_goals": 0.9634,
+        "home_win": 0.1394,
+        "draw": 0.1317,
+        "away_win": 0.7289
+      },
       "using_xg": false,
       "bets": [],
       "builder": null,
@@ -53,6 +69,14 @@
         "away_expected_goals": 0.5,
         "total_expected_goals": 1.04,
         "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.1642,
+        "over_2_5_goals": 0.0878,
+        "over_1_5_goals": 0.279,
+        "home_win": 0.2855,
+        "draw": 0.4555,
+        "away_win": 0.2589
       },
       "using_xg": false,
       "bets": [],
@@ -72,6 +96,14 @@
         "total_expected_goals": 3.12,
         "expected_cards": 3.6
       },
+      "model_projections": {
+        "btts_yes": 0.6231,
+        "over_2_5_goals": 0.6032,
+        "over_1_5_goals": 0.8181,
+        "home_win": 0.4073,
+        "draw": 0.2372,
+        "away_win": 0.3555
+      },
       "using_xg": false,
       "bets": [],
       "builder": null,
@@ -89,6 +121,14 @@
         "away_expected_goals": 0.5,
         "total_expected_goals": 1.04,
         "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.1642,
+        "over_2_5_goals": 0.0878,
+        "over_1_5_goals": 0.279,
+        "home_win": 0.2855,
+        "draw": 0.4555,
+        "away_win": 0.2589
       },
       "using_xg": false,
       "bets": [],
@@ -108,6 +148,14 @@
         "total_expected_goals": 3.12,
         "expected_cards": 3.6
       },
+      "model_projections": {
+        "btts_yes": 0.6231,
+        "over_2_5_goals": 0.6032,
+        "over_1_5_goals": 0.8181,
+        "home_win": 0.4073,
+        "draw": 0.2372,
+        "away_win": 0.3555
+      },
       "using_xg": false,
       "bets": [],
       "builder": null,
@@ -125,6 +173,14 @@
         "away_expected_goals": 1.5,
         "total_expected_goals": 3.66,
         "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.6873,
+        "over_2_5_goals": 0.7077,
+        "over_1_5_goals": 0.8801,
+        "home_win": 0.5274,
+        "draw": 0.2066,
+        "away_win": 0.266
       },
       "using_xg": false,
       "bets": [],
@@ -144,6 +200,14 @@
         "total_expected_goals": 4.78,
         "expected_cards": 3.6
       },
+      "model_projections": {
+        "btts_yes": 0.6177,
+        "over_2_5_goals": 0.8556,
+        "over_1_5_goals": 0.9515,
+        "home_win": 0.8588,
+        "draw": 0.0862,
+        "away_win": 0.055
+      },
       "using_xg": false,
       "bets": [],
       "builder": null,
@@ -161,6 +225,14 @@
         "away_expected_goals": 1.0,
         "total_expected_goals": 4.78,
         "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.6177,
+        "over_2_5_goals": 0.8556,
+        "over_1_5_goals": 0.9515,
+        "home_win": 0.8588,
+        "draw": 0.0862,
+        "away_win": 0.055
       },
       "using_xg": false,
       "bets": [],
@@ -180,6 +252,14 @@
         "total_expected_goals": 3.66,
         "expected_cards": 3.6
       },
+      "model_projections": {
+        "btts_yes": 0.6873,
+        "over_2_5_goals": 0.7077,
+        "over_1_5_goals": 0.8801,
+        "home_win": 0.5274,
+        "draw": 0.2066,
+        "away_win": 0.266
+      },
       "using_xg": false,
       "bets": [],
       "builder": null,
@@ -197,6 +277,14 @@
         "away_expected_goals": 1.0,
         "total_expected_goals": 3.16,
         "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.5592,
+        "over_2_5_goals": 0.6117,
+        "over_1_5_goals": 0.8235,
+        "home_win": 0.6384,
+        "draw": 0.1972,
+        "away_win": 0.1644
       },
       "using_xg": false,
       "bets": [],
@@ -216,6 +304,14 @@
         "total_expected_goals": 3.66,
         "expected_cards": 3.6
       },
+      "model_projections": {
+        "btts_yes": 0.6873,
+        "over_2_5_goals": 0.7077,
+        "over_1_5_goals": 0.8801,
+        "home_win": 0.5274,
+        "draw": 0.2066,
+        "away_win": 0.266
+      },
       "using_xg": false,
       "bets": [],
       "builder": null,
@@ -233,6 +329,14 @@
         "away_expected_goals": 1.5,
         "total_expected_goals": 3.66,
         "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.6873,
+        "over_2_5_goals": 0.7077,
+        "over_1_5_goals": 0.8801,
+        "home_win": 0.5274,
+        "draw": 0.2066,
+        "away_win": 0.266
       },
       "using_xg": false,
       "bets": [],
@@ -252,6 +356,14 @@
         "total_expected_goals": 3.16,
         "expected_cards": 3.6
       },
+      "model_projections": {
+        "btts_yes": 0.5592,
+        "over_2_5_goals": 0.6117,
+        "over_1_5_goals": 0.8235,
+        "home_win": 0.6384,
+        "draw": 0.1972,
+        "away_win": 0.1644
+      },
       "using_xg": false,
       "bets": [],
       "builder": null,
@@ -269,6 +381,14 @@
         "away_expected_goals": 2.25,
         "total_expected_goals": 3.87,
         "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.7176,
+        "over_2_5_goals": 0.7422,
+        "over_1_5_goals": 0.8984,
+        "home_win": 0.2774,
+        "draw": 0.2017,
+        "away_win": 0.521
       },
       "using_xg": false,
       "bets": [],
@@ -288,6 +408,14 @@
         "total_expected_goals": 3.93,
         "expected_cards": 3.6
       },
+      "model_projections": {
+        "btts_yes": 0.7085,
+        "over_2_5_goals": 0.7515,
+        "over_1_5_goals": 0.9032,
+        "home_win": 0.5809,
+        "draw": 0.1899,
+        "away_win": 0.2292
+      },
       "using_xg": false,
       "bets": [],
       "builder": null,
@@ -305,6 +433,14 @@
         "away_expected_goals": 0.25,
         "total_expected_goals": 1.87,
         "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.1774,
+        "over_2_5_goals": 0.2882,
+        "over_1_5_goals": 0.5577,
+        "home_win": 0.724,
+        "draw": 0.2232,
+        "away_win": 0.0529
       },
       "using_xg": false,
       "bets": [],
@@ -324,6 +460,14 @@
         "total_expected_goals": 1.79,
         "expected_cards": 3.6
       },
+      "model_projections": {
+        "btts_yes": 0.2977,
+        "over_2_5_goals": 0.2667,
+        "over_1_5_goals": 0.5342,
+        "home_win": 0.1604,
+        "draw": 0.3002,
+        "away_win": 0.5394
+      },
       "using_xg": false,
       "bets": [],
       "builder": null,
@@ -342,6 +486,14 @@
         "total_expected_goals": 2.04,
         "expected_cards": 3.6
       },
+      "model_projections": {
+        "btts_yes": 0.3242,
+        "over_2_5_goals": 0.3341,
+        "over_1_5_goals": 0.6047,
+        "home_win": 0.1322,
+        "draw": 0.2587,
+        "away_win": 0.6091
+      },
       "using_xg": false,
       "bets": [],
       "builder": null,
@@ -359,6 +511,14 @@
         "away_expected_goals": 1.25,
         "total_expected_goals": 2.06,
         "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.3961,
+        "over_2_5_goals": 0.3396,
+        "over_1_5_goals": 0.61,
+        "home_win": 0.2407,
+        "draw": 0.2931,
+        "away_win": 0.4662
       },
       "using_xg": false,
       "bets": [],
