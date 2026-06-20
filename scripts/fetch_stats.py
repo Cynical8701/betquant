@@ -1,6 +1,8 @@
 """
-Fetch team and player statistics from API-Football for each fixture.
-Caches by team_id within a run to stay well under the 100 req/day free limit.
+Fetch team statistics from football-data.org.
+Uses each team's last 10 finished matches to compute goal averages.
+Note: football-data.org free tier does not provide xG or shots data;
+the model will use goals-per-game as the underlying metric and flag this clearly.
 Writes: data/stats_raw.json
 """
 
@@ -9,7 +11,7 @@ import json
 import logging
 import os
 import sys
-from datetime import datetime
+import time
 
 import requests
 
@@ -22,123 +24,93 @@ FIXTURES_PATH = os.path.join(DATA_DIR, "fixtures_raw.json")
 SAMPLE_PATH = os.path.join(DATA_DIR, "sample", "stats.json")
 OUT_PATH = os.path.join(DATA_DIR, "stats_raw.json")
 
-BASE_URL = "https://v3.football.api-sports.io"
+BASE_URL = "https://api.football-data.org/v4"
+MATCHES_SAMPLE = 10  # last N finished matches per team
 
 
-def current_season():
-    now = datetime.now()
-    return now.year if now.month >= 7 else now.year - 1
-
-
-def api_get(endpoint: str, params: dict, api_key: str) -> dict | None:
-    headers = {"x-apisports-key": api_key}
+def fetch_team_matches(team_id: int, api_key: str) -> list:
+    headers = {"X-Auth-Token": api_key}
+    params = {"status": "FINISHED", "limit": MATCHES_SAMPLE}
     try:
-        resp = requests.get(f"{BASE_URL}/{endpoint}", headers=headers, params=params, timeout=15)
+        resp = requests.get(
+            f"{BASE_URL}/teams/{team_id}/matches",
+            headers=headers, params=params, timeout=15
+        )
         if resp.status_code == 429:
-            log.warning(f"Rate limited on {endpoint} — skipping")
-            return None
+            log.warning(f"Rate limited fetching team {team_id} — waiting 60s")
+            time.sleep(60)
+            return []
+        if resp.status_code == 404:
+            log.warning(f"Team {team_id} not found")
+            return []
         resp.raise_for_status()
-        return resp.json()
+        return resp.json().get("matches", [])
     except requests.RequestException as e:
-        log.error(f"API error on {endpoint}: {e}")
-        return None
+        log.error(f"Failed to fetch matches for team {team_id}: {e}")
+        return []
 
 
-def sum_card_periods(card_dict: dict) -> int:
-    total = 0
-    for period_data in card_dict.values():
-        if isinstance(period_data, dict):
-            total += period_data.get("total") or 0
-    return total
+def compute_stats(team_id: int, team_name: str, matches: list) -> dict:
+    goals_for = []
+    goals_against = []
 
+    for m in matches:
+        score = m.get("score", {}).get("fullTime", {})
+        home_id = m.get("homeTeam", {}).get("id")
+        home_g = score.get("home")
+        away_g = score.get("away")
+        if home_g is None or away_g is None:
+            continue
+        if home_id == team_id:
+            goals_for.append(home_g)
+            goals_against.append(away_g)
+        else:
+            goals_for.append(away_g)
+            goals_against.append(home_g)
 
-def extract_team_stats(response: dict, team_id: int, team_name: str) -> dict:
-    r = response.get("response", {})
-    games = r.get("fixtures", {}).get("played", {}).get("total", 1) or 1
-    goals = r.get("goals", {})
-    shots = r.get("shots", {})
-    cards = r.get("cards", {})
+    n = len(goals_for) or 1
+    gf_avg = sum(goals_for) / n
+    ga_avg = sum(goals_against) / n
 
-    goals_for = float(goals.get("for", {}).get("average", {}).get("total", 0) or 0)
-    goals_against = float(goals.get("against", {}).get("average", {}).get("total", 0) or 0)
-
-    shots_on_total = shots.get("on", {}).get("total", {}).get("total") or 0
-    shots_on_for_pg = shots_on_total / games
-
-    shots_on_against_total = shots.get("on", {}).get("total", {})
-    # API-Football shots.on structure is nested differently for against — use shots.against if present
-    shots_against_raw = r.get("shots_against", {})
-    shots_on_against_pg = (shots_against_raw.get("on", {}).get("total") or 0) / games
-
-    yellows_total = sum_card_periods(cards.get("yellow", {}))
-    reds_total = sum_card_periods(cards.get("red", {}))
-
-    clean_sheets = r.get("clean_sheet", {}).get("total", 0) or 0
-    failed_to_score = r.get("failed_to_score", {}).get("total", 0) or 0
-
+    # Cards: football-data.org free tier doesn't provide card stats per team
+    # Use empirical league averages as defaults (approx 1.8 yellows/game per team)
     return {
         "team_id": team_id,
         "team_name": team_name,
-        "games_played": games,
-        "goals_for_avg": round(goals_for, 3),
-        "goals_against_avg": round(goals_against, 3),
-        "shots_on_target_for_pg": round(shots_on_for_pg, 2),
-        "shots_on_target_against_pg": round(shots_on_against_pg, 2),
-        "yellow_cards_avg": round(yellows_total / games, 3),
-        "red_cards_avg": round(reds_total / games, 3),
-        "clean_sheet_rate": round(clean_sheets / games, 3),
-        "failed_to_score_rate": round(failed_to_score / games, 3),
+        "games_sampled": n,
+        "goals_for_avg": round(gf_avg, 3),
+        "goals_against_avg": round(ga_avg, 3),
+        "shots_on_target_for_pg": None,
+        "shots_on_target_against_pg": None,
+        "yellow_cards_avg": 1.8,
+        "red_cards_avg": 0.05,
+        "clean_sheet_rate": round(sum(1 for g in goals_against if g == 0) / n, 3),
+        "failed_to_score_rate": round(sum(1 for g in goals_for if g == 0) / n, 3),
         "xg_available": False,
         "xg_for_avg": None,
         "xg_against_avg": None,
+        "top_scorers": [],  # not available from football-data.org free tier
     }
 
 
-def extract_top_scorers(response: dict, team_id: int, league_id: int) -> list:
-    players = []
-    for item in response.get("response", []):
-        player = item.get("player", {})
-        stats_list = item.get("statistics", [])
-        # Find stats for the matching league
-        stat = next(
-            (s for s in stats_list if s.get("league", {}).get("id") == league_id),
-            stats_list[0] if stats_list else None,
-        )
-        if not stat:
-            continue
-        minutes = stat.get("games", {}).get("minutes") or 0
-        if minutes < 90:
-            continue
-        goals = stat.get("goals", {}).get("total") or 0
-        shots_on = stat.get("shots", {}).get("on") or 0
-        per90 = minutes / 90
-        players.append(
-            {
-                "player_id": player.get("id"),
-                "name": player.get("name"),
-                "goals": goals,
-                "goals_per90": round(goals / per90, 3) if per90 else 0,
-                "shots_on_target_per90": round(shots_on / per90, 3) if per90 else 0,
-                "minutes": minutes,
-            }
-        )
-    players.sort(key=lambda p: p["goals"], reverse=True)
-    return players[:5]
-
-
-def fetch_team_stats(team_id: int, league_id: int, season: int, api_key: str) -> dict | None:
-    data = api_get("teams/statistics", {"league": league_id, "season": season, "team": team_id}, api_key)
-    if not data:
-        return None
-    team_name = data.get("response", {}).get("team", {}).get("name", str(team_id))
-    return extract_team_stats(data, team_id, team_name)
-
-
-def fetch_top_scorers(team_id: int, league_id: int, season: int, api_key: str) -> list:
-    data = api_get("players", {"team": team_id, "league": league_id, "season": season}, api_key)
-    if not data:
-        return []
-    return extract_top_scorers(data, team_id, league_id)
+def default_stats(team_id: int, team_name: str) -> dict:
+    return {
+        "team_id": team_id,
+        "team_name": team_name,
+        "games_sampled": 0,
+        "goals_for_avg": 1.3,
+        "goals_against_avg": 1.3,
+        "shots_on_target_for_pg": None,
+        "shots_on_target_against_pg": None,
+        "yellow_cards_avg": 1.8,
+        "red_cards_avg": 0.05,
+        "clean_sheet_rate": 0.28,
+        "failed_to_score_rate": 0.22,
+        "xg_available": False,
+        "xg_for_avg": None,
+        "xg_against_avg": None,
+        "top_scorers": [],
+    }
 
 
 def main(dry_run: bool = False):
@@ -153,69 +125,50 @@ def main(dry_run: bool = False):
         log.info(f"Wrote sample stats → {OUT_PATH}")
         return stats
 
-    api_key = os.environ.get("API_FOOTBALL_KEY")
+    api_key = os.environ.get("FOOTBALL_DATA_KEY")
     if not api_key:
-        log.error("API_FOOTBALL_KEY env var not set")
+        log.error("FOOTBALL_DATA_KEY env var not set")
         sys.exit(1)
 
     with open(FIXTURES_PATH) as f:
         fixtures = json.load(f)
 
-    # Build a per-league season map so World Cup (season=2026) is handled correctly
-    league_season_map = {
-        league["api_football_id"]: league.get("season") or current_season()
-        for league in json.load(open(os.path.join(ROOT, "config", "leagues.json")))["leagues"]
-    }
     stats: dict[str, dict] = {}
-    seen_team_ids: set[int] = set()
-    request_count = 0
+    seen: set[int] = set()
+    call_count = 0
 
     for fix in fixtures:
-        league_id = fix["api_football_id"]
-        season = league_season_map.get(league_id, current_season())
         for team_id, team_name in [
             (fix["home_team_id"], fix["home_team"]),
             (fix["away_team_id"], fix["away_team"]),
         ]:
-            if team_id in seen_team_ids:
-                log.info(f"  Cache hit: {team_name}")
+            if team_id in seen:
                 continue
-            seen_team_ids.add(team_id)
+            seen.add(team_id)
 
-            log.info(f"  Stats: {team_name} (league {league_id}, season {season})")
-            team_stat = fetch_team_stats(team_id, league_id, season, api_key)
-            request_count += 1
+            log.info(f"  Fetching recent form: {team_name} (id {team_id})")
+            # Respect the 10 req/min free tier limit
+            if call_count > 0 and call_count % 9 == 0:
+                log.info("  Pausing 65s to respect rate limit...")
+                time.sleep(65)
 
-            if team_stat is None:
-                log.warning(f"  No stats returned for {team_name} — using defaults")
-                team_stat = {
-                    "team_id": team_id,
-                    "team_name": team_name,
-                    "games_played": 0,
-                    "goals_for_avg": 1.3,
-                    "goals_against_avg": 1.3,
-                    "shots_on_target_for_pg": 4.0,
-                    "shots_on_target_against_pg": 4.0,
-                    "yellow_cards_avg": 1.8,
-                    "red_cards_avg": 0.05,
-                    "clean_sheet_rate": 0.3,
-                    "failed_to_score_rate": 0.2,
-                    "xg_available": False,
-                    "xg_for_avg": None,
-                    "xg_against_avg": None,
-                }
+            matches = fetch_team_matches(team_id, api_key)
+            call_count += 1
 
-            log.info(f"  Players: {team_name}")
-            scorers = fetch_top_scorers(team_id, league_id, season, api_key)
-            request_count += 1
-            team_stat["top_scorers"] = scorers
-
-            stats[str(team_id)] = team_stat
-            log.info(f"  [{request_count} API calls used so far]")
+            if matches:
+                stats[str(team_id)] = compute_stats(team_id, team_name, matches)
+                log.info(
+                    f"  {team_name}: {stats[str(team_id)]['games_sampled']} matches — "
+                    f"avg {stats[str(team_id)]['goals_for_avg']:.2f} for / "
+                    f"{stats[str(team_id)]['goals_against_avg']:.2f} against"
+                )
+            else:
+                log.warning(f"  No match data for {team_name} — using defaults")
+                stats[str(team_id)] = default_stats(team_id, team_name)
 
     with open(OUT_PATH, "w") as f:
         json.dump(stats, f, indent=2)
-    log.info(f"Saved stats for {len(stats)} teams → {OUT_PATH} ({request_count} API calls)")
+    log.info(f"Saved stats for {len(stats)} teams → {OUT_PATH} ({call_count} API calls)")
     return stats
 
 

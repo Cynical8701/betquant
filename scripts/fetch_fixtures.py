@@ -1,5 +1,6 @@
 """
-Fetch upcoming fixtures from API-Football for all configured leagues.
+Fetch upcoming fixtures from football-data.org for all configured leagues.
+Free tier: 10 req/min, current season data, no credit card needed.
 Writes: data/fixtures_raw.json
 """
 
@@ -8,7 +9,7 @@ import json
 import logging
 import os
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 import requests
 
@@ -21,7 +22,7 @@ DATA_DIR = os.path.join(ROOT, "data")
 SAMPLE_PATH = os.path.join(DATA_DIR, "sample", "fixtures.json")
 OUT_PATH = os.path.join(DATA_DIR, "fixtures_raw.json")
 
-BASE_URL = "https://v3.football.api-sports.io"
+BASE_URL = "https://api.football-data.org/v4"
 
 
 def load_config():
@@ -29,53 +30,47 @@ def load_config():
         return json.load(f)
 
 
-def current_season():
-    now = datetime.now()
-    return now.year if now.month >= 7 else now.year - 1
-
-
-def fetch_league_fixtures(league_id: int, api_key: str, days_ahead: int, season: int | None = None) -> list:
-    headers = {"x-apisports-key": api_key}
-    # "next" returns scheduled fixtures only — more reliable than from/to filtering
+def fetch_league_fixtures(comp_code: str, api_key: str, days_ahead: int) -> list:
+    headers = {"X-Auth-Token": api_key}
+    today = datetime.now(timezone.utc).date()
+    end_date = today + timedelta(days=days_ahead)
     params = {
-        "league": league_id,
-        "next": days_ahead * 3,
-        "season": season or current_season(),
-        "timezone": "UTC",
+        "status": "TIMED,SCHEDULED",
+        "dateFrom": today.isoformat(),
+        "dateTo": end_date.isoformat(),
     }
     try:
-        resp = requests.get(f"{BASE_URL}/fixtures", headers=headers, params=params, timeout=15)
+        resp = requests.get(
+            f"{BASE_URL}/competitions/{comp_code}/matches",
+            headers=headers, params=params, timeout=15
+        )
         if resp.status_code == 429:
-            log.warning(f"Rate limited for league {league_id} — skipping")
+            log.warning(f"Rate limited for {comp_code} — skipping")
+            return []
+        if resp.status_code == 403:
+            log.warning(f"Access denied for {comp_code} — not on free tier")
             return []
         resp.raise_for_status()
-        data = resp.json()
-        errors = data.get("errors")
-        if errors:
-            log.error(f"API error for league {league_id}: {errors}")
-            return []
-        results = data.get("results", 0)
-        log.info(f"  API returned {results} fixtures for league {league_id} (params: {params})")
-        return data.get("response", [])
+        matches = resp.json().get("matches", [])
+        log.info(f"  Found {len(matches)} upcoming fixtures for {comp_code}")
+        return matches
     except requests.RequestException as e:
-        log.error(f"Failed to fetch fixtures for league {league_id}: {e}")
+        log.error(f"Failed to fetch {comp_code}: {e}")
         return []
 
 
-def normalise(raw: dict, league_meta: dict) -> dict:
-    fixture = raw["fixture"]
-    teams = raw["teams"]
+def normalise(match: dict, league_meta: dict) -> dict:
     return {
-        "fixture_id": fixture["id"],
+        "fixture_id": match["id"],
         "league": league_meta["name"],
         "league_country": league_meta["country"],
-        "api_football_id": league_meta["api_football_id"],
+        "football_data_code": league_meta["football_data_code"],
         "odds_api_key": league_meta["odds_api_key"],
-        "home_team": teams["home"]["name"],
-        "home_team_id": teams["home"]["id"],
-        "away_team": teams["away"]["name"],
-        "away_team_id": teams["away"]["id"],
-        "kickoff_utc": fixture["date"],
+        "home_team": match["homeTeam"]["name"],
+        "home_team_id": match["homeTeam"]["id"],
+        "away_team": match["awayTeam"]["name"],
+        "away_team_id": match["awayTeam"]["id"],
+        "kickoff_utc": match["utcDate"],
     }
 
 
@@ -92,9 +87,9 @@ def main(dry_run: bool = False):
         return fixtures
 
     config = load_config()
-    api_key = os.environ.get("API_FOOTBALL_KEY")
+    api_key = os.environ.get("FOOTBALL_DATA_KEY")
     if not api_key:
-        log.error("API_FOOTBALL_KEY env var not set")
+        log.error("FOOTBALL_DATA_KEY env var not set")
         sys.exit(1)
 
     days_ahead = config["settings"]["days_ahead"]
@@ -105,9 +100,9 @@ def main(dry_run: bool = False):
         if not league["enabled"]:
             continue
         log.info(f"Fetching: {league['name']}")
-        raw_list = fetch_league_fixtures(league["api_football_id"], api_key, days_ahead, league.get("season"))
-        for raw in raw_list:
-            all_fixtures.append(normalise(raw, league))
+        raw = fetch_league_fixtures(league["football_data_code"], api_key, days_ahead)
+        for match in raw:
+            all_fixtures.append(normalise(match, league))
         if len(all_fixtures) >= max_fixtures:
             break
 

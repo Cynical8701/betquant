@@ -27,13 +27,13 @@ jobs:
       # ── 1. Fetch upcoming fixtures ───────────────────────────────────────
       - name: Fetch fixtures
         env:
-          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
         run: python scripts/fetch_fixtures.py
 
       # ── 2. Fetch team & player stats ────────────────────────────────────
       - name: Fetch stats
         env:
-          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
         run: python scripts/fetch_stats.py
 
       # ── 3. Fetch pre-match odds ──────────────────────────────────────────
