@@ -34,7 +34,7 @@ def current_season():
     return now.year if now.month >= 7 else now.year - 1
 
 
-def fetch_league_fixtures(league_id: int, api_key: str, days_ahead: int) -> list:
+def fetch_league_fixtures(league_id: int, api_key: str, days_ahead: int, season: int | None = None) -> list:
     headers = {"x-apisports-key": api_key}
     today = datetime.now(timezone.utc).date()
     end_date = today + timedelta(days=days_ahead)
@@ -42,7 +42,7 @@ def fetch_league_fixtures(league_id: int, api_key: str, days_ahead: int) -> list
         "league": league_id,
         "from": today.isoformat(),
         "to": end_date.isoformat(),
-        "season": current_season(),
+        "season": season or current_season(),
         "timezone": "UTC",
     }
     try:
@@ -100,7 +100,7 @@ def main(dry_run: bool = False):
         if not league["enabled"]:
             continue
         log.info(f"Fetching: {league['name']}")
-        raw_list = fetch_league_fixtures(league["api_football_id"], api_key, days_ahead)
+        raw_list = fetch_league_fixtures(league["api_football_id"], api_key, days_ahead, league.get("season"))
         for raw in raw_list:
             all_fixtures.append(normalise(raw, league))
         if len(all_fixtures) >= max_fixtures:

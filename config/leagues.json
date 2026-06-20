@@ -1,6 +1,14 @@
 {
   "leagues": [
     {
+      "name": "FIFA World Cup 2026",
+      "country": "World",
+      "api_football_id": 1,
+      "odds_api_key": "soccer_fifa_world_cup",
+      "season": 2026,
+      "enabled": true
+    },
+    {
       "name": "Premier League",
       "country": "England",
       "api_football_id": 39,

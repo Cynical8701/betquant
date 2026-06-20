@@ -161,13 +161,18 @@ def main(dry_run: bool = False):
     with open(FIXTURES_PATH) as f:
         fixtures = json.load(f)
 
-    season = current_season()
+    # Build a per-league season map so World Cup (season=2026) is handled correctly
+    league_season_map = {
+        league["api_football_id"]: league.get("season") or current_season()
+        for league in json.load(open(os.path.join(ROOT, "config", "leagues.json")))["leagues"]
+    }
     stats: dict[str, dict] = {}
     seen_team_ids: set[int] = set()
     request_count = 0
 
     for fix in fixtures:
         league_id = fix["api_football_id"]
+        season = league_season_map.get(league_id, current_season())
         for team_id, team_name in [
             (fix["home_team_id"], fix["home_team"]),
             (fix["away_team_id"], fix["away_team"]),
