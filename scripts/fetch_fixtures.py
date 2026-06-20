@@ -8,7 +8,7 @@ import json
 import logging
 import os
 import sys
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 
 import requests
 
@@ -36,12 +36,10 @@ def current_season():
 
 def fetch_league_fixtures(league_id: int, api_key: str, days_ahead: int, season: int | None = None) -> list:
     headers = {"x-apisports-key": api_key}
-    today = datetime.now(timezone.utc).date()
-    end_date = today + timedelta(days=days_ahead)
+    # "next" returns scheduled fixtures only — more reliable than from/to filtering
     params = {
         "league": league_id,
-        "from": today.isoformat(),
-        "to": end_date.isoformat(),
+        "next": days_ahead * 3,
         "season": season or current_season(),
         "timezone": "UTC",
     }
