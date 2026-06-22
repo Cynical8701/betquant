@@ -1,114 +1,10 @@
 {
-  "generated_at": "2026-06-21T10:28:08.350961+00:00",
+  "generated_at": "2026-06-22T12:44:15.142546+00:00",
   "dry_run": false,
   "total_fixtures": 20,
   "total_tier1_bets": 0,
   "total_tier2_bets": 0,
   "fixtures": [
-    {
-      "fixture_id": 537371,
-      "home_team": "Spain",
-      "away_team": "Saudi Arabia",
-      "kickoff_utc": "2026-06-21T16:00:00Z",
-      "league": "FIFA World Cup 2026",
-      "league_country": "World",
-      "model_lambdas": {
-        "home_expected_goals": 0.54,
-        "away_expected_goals": 0.5,
-        "total_expected_goals": 1.04,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.1642,
-        "over_2_5_goals": 0.0878,
-        "over_1_5_goals": 0.279,
-        "home_win": 0.2855,
-        "draw": 0.4555,
-        "away_win": 0.2589
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 537365,
-      "home_team": "Belgium",
-      "away_team": "Iran",
-      "kickoff_utc": "2026-06-21T19:00:00Z",
-      "league": "FIFA World Cup 2026",
-      "league_country": "World",
-      "model_lambdas": {
-        "home_expected_goals": 1.62,
-        "away_expected_goals": 1.5,
-        "total_expected_goals": 3.12,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.6231,
-        "over_2_5_goals": 0.6032,
-        "over_1_5_goals": 0.8181,
-        "home_win": 0.4073,
-        "draw": 0.2372,
-        "away_win": 0.3555
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 537372,
-      "home_team": "Uruguay",
-      "away_team": "Cape Verde Islands",
-      "kickoff_utc": "2026-06-21T22:00:00Z",
-      "league": "FIFA World Cup 2026",
-      "league_country": "World",
-      "model_lambdas": {
-        "home_expected_goals": 0.54,
-        "away_expected_goals": 0.5,
-        "total_expected_goals": 1.04,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.1642,
-        "over_2_5_goals": 0.0878,
-        "over_1_5_goals": 0.279,
-        "home_win": 0.2855,
-        "draw": 0.4555,
-        "away_win": 0.2589
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 537366,
-      "home_team": "New Zealand",
-      "away_team": "Egypt",
-      "kickoff_utc": "2026-06-22T01:00:00Z",
-      "league": "FIFA World Cup 2026",
-      "league_country": "World",
-      "model_lambdas": {
-        "home_expected_goals": 1.62,
-        "away_expected_goals": 1.5,
-        "total_expected_goals": 3.12,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.6231,
-        "over_2_5_goals": 0.6032,
-        "over_1_5_goals": 0.8181,
-        "home_win": 0.4073,
-        "draw": 0.2372,
-        "away_win": 0.3555
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
     {
       "fixture_id": 537399,
       "home_team": "Argentina",
@@ -519,6 +415,110 @@
         "home_win": 0.1198,
         "draw": 0.1801,
         "away_win": 0.7001
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 537361,
+      "home_team": "Tunisia",
+      "away_team": "Netherlands",
+      "kickoff_utc": "2026-06-25T23:00:00Z",
+      "league": "FIFA World Cup 2026",
+      "league_country": "World",
+      "model_lambdas": {
+        "home_expected_goals": 1.08,
+        "away_expected_goals": 4.0,
+        "total_expected_goals": 5.08,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.6483,
+        "over_2_5_goals": 0.8819,
+        "over_1_5_goals": 0.9622,
+        "home_win": 0.0535,
+        "draw": 0.0806,
+        "away_win": 0.8659
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 537362,
+      "home_team": "Japan",
+      "away_team": "Sweden",
+      "kickoff_utc": "2026-06-25T23:00:00Z",
+      "league": "FIFA World Cup 2026",
+      "league_country": "World",
+      "model_lambdas": {
+        "home_expected_goals": 3.24,
+        "away_expected_goals": 2.0,
+        "total_expected_goals": 5.24,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.8308,
+        "over_2_5_goals": 0.8942,
+        "over_1_5_goals": 0.9669,
+        "home_win": 0.6242,
+        "draw": 0.1566,
+        "away_win": 0.2191
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 537349,
+      "home_team": "Turkey",
+      "away_team": "United States",
+      "kickoff_utc": "2026-06-26T02:00:00Z",
+      "league": "FIFA World Cup 2026",
+      "league_country": "World",
+      "model_lambdas": {
+        "home_expected_goals": 0.27,
+        "away_expected_goals": 2.25,
+        "total_expected_goals": 2.52,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.2117,
+        "over_2_5_goals": 0.4613,
+        "over_1_5_goals": 0.7168,
+        "home_win": 0.0329,
+        "draw": 0.1373,
+        "away_win": 0.8298
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 537350,
+      "home_team": "Paraguay",
+      "away_team": "Australia",
+      "kickoff_utc": "2026-06-26T02:00:00Z",
+      "league": "FIFA World Cup 2026",
+      "league_country": "World",
+      "model_lambdas": {
+        "home_expected_goals": 1.08,
+        "away_expected_goals": 1.5,
+        "total_expected_goals": 2.58,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.513,
+        "over_2_5_goals": 0.4765,
+        "over_1_5_goals": 0.7287,
+        "home_win": 0.2729,
+        "draw": 0.2582,
+        "away_win": 0.4689
       },
       "using_xg": false,
       "bets": [],
