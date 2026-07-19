@@ -1,36 +1,10 @@
 {
-  "generated_at": "2026-07-18T08:28:40.295719+00:00",
+  "generated_at": "2026-07-19T08:59:49.209492+00:00",
   "dry_run": false,
-  "total_fixtures": 2,
+  "total_fixtures": 1,
   "total_tier1_bets": 0,
   "total_tier2_bets": 0,
   "fixtures": [
-    {
-      "fixture_id": 537389,
-      "home_team": "France",
-      "away_team": "England",
-      "kickoff_utc": "2026-07-18T21:00:00Z",
-      "league": "FIFA World Cup 2026",
-      "league_country": "World",
-      "model_lambdas": {
-        "home_expected_goals": 1.852,
-        "away_expected_goals": 1.285,
-        "total_expected_goals": 3.137,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.6099,
-        "over_2_5_goals": 0.6068,
-        "over_1_5_goals": 0.8204,
-        "home_win": 0.507,
-        "draw": 0.2271,
-        "away_win": 0.2659
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
     {
       "fixture_id": 537390,
       "home_team": "Spain",
