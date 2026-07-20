@@ -1,35 +1,8 @@
 {
-  "generated_at": "2026-07-19T08:59:49.209492+00:00",
+  "generated_at": "2026-07-20T09:47:53.240784+00:00",
   "dry_run": false,
-  "total_fixtures": 1,
+  "total_fixtures": 0,
   "total_tier1_bets": 0,
   "total_tier2_bets": 0,
-  "fixtures": [
-    {
-      "fixture_id": 537390,
-      "home_team": "Spain",
-      "away_team": "Argentina",
-      "kickoff_utc": "2026-07-19T19:00:00Z",
-      "league": "FIFA World Cup 2026",
-      "league_country": "World",
-      "model_lambdas": {
-        "home_expected_goals": 1.543,
-        "away_expected_goals": 1.428,
-        "total_expected_goals": 2.971,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.5978,
-        "over_2_5_goals": 0.5703,
-        "over_1_5_goals": 0.7965,
-        "home_win": 0.4033,
-        "draw": 0.2439,
-        "away_win": 0.3528
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    }
-  ]
+  "fixtures": []
 }
