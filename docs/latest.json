@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-08T07:38:19.497957+00:00",
+  "generated_at": "2026-08-09T07:44:25.178152+00:00",
   "dry_run": false,
-  "total_fixtures": 2,
+  "total_fixtures": 5,
   "total_tier1_bets": 0,
   "total_tier2_bets": 0,
   "fixtures": [
@@ -36,6 +36,84 @@
       "home_team": "Sevilla FC",
       "away_team": "Rayo Vallecano de Madrid",
       "kickoff_utc": "2026-08-15T19:30:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 1.404,
+        "away_expected_goals": 1.3,
+        "total_expected_goals": 2.704,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.5488,
+        "over_2_5_goals": 0.5074,
+        "over_1_5_goals": 0.7521,
+        "home_win": 0.3952,
+        "draw": 0.2576,
+        "away_win": 0.3473
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564629,
+      "home_team": "Real Racing Club de Santander",
+      "away_team": "Villarreal CF",
+      "kickoff_utc": "2026-08-16T15:00:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 1.404,
+        "away_expected_goals": 1.3,
+        "total_expected_goals": 2.704,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.5488,
+        "over_2_5_goals": 0.5074,
+        "over_1_5_goals": 0.7521,
+        "home_win": 0.3952,
+        "draw": 0.2576,
+        "away_win": 0.3473
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564632,
+      "home_team": "RCD Espanyol de Barcelona",
+      "away_team": "Levante UD",
+      "kickoff_utc": "2026-08-16T17:00:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 1.404,
+        "away_expected_goals": 1.3,
+        "total_expected_goals": 2.704,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.5488,
+        "over_2_5_goals": 0.5074,
+        "over_1_5_goals": 0.7521,
+        "home_win": 0.3952,
+        "draw": 0.2576,
+        "away_win": 0.3473
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564636,
+      "home_team": "RC Celta de Vigo",
+      "away_team": "CA Osasuna",
+      "kickoff_utc": "2026-08-16T19:30:00Z",
       "league": "La Liga",
       "league_country": "Spain",
       "model_lambdas": {
