@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T07:38:45.722299+00:00",
+  "generated_at": "2026-08-26T07:40:34.826869+00:00",
   "dry_run": false,
   "total_fixtures": 20,
   "total_tier1_bets": 0,
@@ -266,32 +266,6 @@
       "odds_available": false
     },
     {
-      "fixture_id": 564637,
-      "home_team": "Valencia CF",
-      "away_team": "Real Betis Balompi\u00e9",
-      "kickoff_utc": "2026-08-25T19:00:00Z",
-      "league": "La Liga",
-      "league_country": "Spain",
-      "model_lambdas": {
-        "home_expected_goals": 0.1,
-        "away_expected_goals": 0.5,
-        "total_expected_goals": 0.6,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.0374,
-        "over_2_5_goals": 0.0231,
-        "over_1_5_goals": 0.1219,
-        "home_win": 0.0591,
-        "draw": 0.5766,
-        "away_win": 0.3643
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
       "fixture_id": 564631,
       "home_team": "Real Madrid CF",
       "away_team": "Real Sociedad de F\u00fatbol",
@@ -519,6 +493,32 @@
         "home_win": 0.644,
         "draw": 0.2145,
         "away_win": 0.1415
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564651,
+      "home_team": "RC Deportivo La Coru\u00f1a",
+      "away_team": "Valencia CF",
+      "kickoff_utc": "2026-08-30T17:30:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 0.81,
+        "away_expected_goals": 0.5,
+        "total_expected_goals": 1.31,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.2184,
+        "over_2_5_goals": 0.1452,
+        "over_1_5_goals": 0.3767,
+        "home_win": 0.3996,
+        "draw": 0.3907,
+        "away_win": 0.2097
       },
       "using_xg": false,
       "bets": [],
