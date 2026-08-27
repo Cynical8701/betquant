@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T07:40:34.826869+00:00",
+  "generated_at": "2026-08-27T18:01:05.800330+00:00",
   "dry_run": false,
   "total_fixtures": 20,
   "total_tier1_bets": 0,
@@ -266,32 +266,6 @@
       "odds_available": false
     },
     {
-      "fixture_id": 564631,
-      "home_team": "Real Madrid CF",
-      "away_team": "Real Sociedad de F\u00fatbol",
-      "kickoff_utc": "2026-08-26T19:00:00Z",
-      "league": "La Liga",
-      "league_country": "Spain",
-      "model_lambdas": {
-        "home_expected_goals": 1.62,
-        "away_expected_goals": 0.5,
-        "total_expected_goals": 2.12,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.3156,
-        "over_2_5_goals": 0.3558,
-        "over_1_5_goals": 0.6255,
-        "home_win": 0.6504,
-        "draw": 0.2388,
-        "away_win": 0.1108
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
       "fixture_id": 564636,
       "home_team": "RC Celta de Vigo",
       "away_team": "CA Osasuna",
@@ -429,18 +403,18 @@
       "league": "La Liga",
       "league_country": "Spain",
       "model_lambdas": {
-        "home_expected_goals": 0.54,
-        "away_expected_goals": 1.5,
-        "total_expected_goals": 2.04,
+        "home_expected_goals": 0.81,
+        "away_expected_goals": 2.25,
+        "total_expected_goals": 3.06,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.3242,
-        "over_2_5_goals": 0.3341,
-        "over_1_5_goals": 0.6047,
-        "home_win": 0.1322,
-        "draw": 0.2587,
-        "away_win": 0.6091
+        "btts_yes": 0.4966,
+        "over_2_5_goals": 0.5901,
+        "over_1_5_goals": 0.8096,
+        "home_win": 0.1198,
+        "draw": 0.1801,
+        "away_win": 0.7001
       },
       "using_xg": false,
       "bets": [],
@@ -481,18 +455,18 @@
       "league": "La Liga",
       "league_country": "Spain",
       "model_lambdas": {
-        "home_expected_goals": 1.89,
+        "home_expected_goals": 2.43,
         "away_expected_goals": 0.75,
-        "total_expected_goals": 2.64,
+        "total_expected_goals": 3.18,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.4479,
-        "over_2_5_goals": 0.4916,
-        "over_1_5_goals": 0.7402,
-        "home_win": 0.644,
-        "draw": 0.2145,
-        "away_win": 0.1415
+        "btts_yes": 0.4812,
+        "over_2_5_goals": 0.6159,
+        "over_1_5_goals": 0.8262,
+        "home_win": 0.7445,
+        "draw": 0.1598,
+        "away_win": 0.0957
       },
       "using_xg": false,
       "bets": [],
@@ -519,6 +493,32 @@
         "home_win": 0.3996,
         "draw": 0.3907,
         "away_win": 0.2097
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564652,
+      "home_team": "RC Celta de Vigo",
+      "away_team": "Athletic Club",
+      "kickoff_utc": "2026-08-30T19:30:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 1.62,
+        "away_expected_goals": 0.5,
+        "total_expected_goals": 2.12,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.3156,
+        "over_2_5_goals": 0.3558,
+        "over_1_5_goals": 0.6255,
+        "home_win": 0.6504,
+        "draw": 0.2388,
+        "away_win": 0.1108
       },
       "using_xg": false,
       "bets": [],
