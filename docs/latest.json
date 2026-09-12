@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T11:57:16.767904+00:00",
+  "generated_at": "2026-09-12T11:22:50.610923+00:00",
   "dry_run": false,
   "total_fixtures": 20,
   "total_tier1_bets": 0,
@@ -91,18 +91,18 @@
       "league": "Premier League",
       "league_country": "England",
       "model_lambdas": {
-        "home_expected_goals": 1.422,
-        "away_expected_goals": 1.484,
-        "total_expected_goals": 2.905,
+        "home_expected_goals": 1.08,
+        "away_expected_goals": 1.667,
+        "total_expected_goals": 2.747,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.5866,
-        "over_2_5_goals": 0.5553,
-        "over_1_5_goals": 0.7863,
-        "home_win": 0.3626,
-        "draw": 0.2474,
-        "away_win": 0.3901
+        "btts_yes": 0.5357,
+        "over_2_5_goals": 0.5178,
+        "over_1_5_goals": 0.7597,
+        "home_win": 0.2461,
+        "draw": 0.2432,
+        "away_win": 0.5108
       },
       "using_xg": false,
       "bets": [],
@@ -117,18 +117,18 @@
       "league": "Premier League",
       "league_country": "England",
       "model_lambdas": {
-        "home_expected_goals": 1.44,
-        "away_expected_goals": 1.667,
-        "total_expected_goals": 3.107,
+        "home_expected_goals": 0.702,
+        "away_expected_goals": 1.15,
+        "total_expected_goals": 1.852,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.619,
-        "over_2_5_goals": 0.6003,
-        "over_1_5_goals": 0.8162,
-        "home_win": 0.3328,
-        "draw": 0.2366,
-        "away_win": 0.4306
+        "btts_yes": 0.3447,
+        "over_2_5_goals": 0.2833,
+        "over_1_5_goals": 0.5525,
+        "home_win": 0.2244,
+        "draw": 0.3116,
+        "away_win": 0.464
       },
       "using_xg": false,
       "bets": [],
@@ -273,18 +273,18 @@
       "league": "Premier League",
       "league_country": "England",
       "model_lambdas": {
-        "home_expected_goals": 1.962,
-        "away_expected_goals": 1.983,
-        "total_expected_goals": 3.945,
+        "home_expected_goals": 1.602,
+        "away_expected_goals": 0.984,
+        "total_expected_goals": 2.586,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.7412,
-        "over_2_5_goals": 0.7538,
-        "over_1_5_goals": 0.9043,
-        "home_win": 0.3915,
-        "draw": 0.2086,
-        "away_win": 0.3999
+        "btts_yes": 0.4999,
+        "over_2_5_goals": 0.478,
+        "over_1_5_goals": 0.7298,
+        "home_win": 0.518,
+        "draw": 0.2499,
+        "away_win": 0.2321
       },
       "using_xg": false,
       "bets": [],
@@ -292,25 +292,155 @@
       "odds_available": false
     },
     {
-      "fixture_id": 565797,
-      "home_team": "1. FC Union Berlin",
-      "away_team": "FC Schalke 04",
-      "kickoff_utc": "2026-09-11T18:30:00Z",
-      "league": "Bundesliga",
-      "league_country": "Germany",
+      "fixture_id": 560587,
+      "home_team": "Tottenham Hotspur FC",
+      "away_team": "Aston Villa FC",
+      "kickoff_utc": "2026-09-19T11:30:00Z",
+      "league": "Premier League",
+      "league_country": "England",
       "model_lambdas": {
-        "home_expected_goals": 1.62,
-        "away_expected_goals": 1.75,
-        "total_expected_goals": 3.37,
+        "home_expected_goals": 0.945,
+        "away_expected_goals": 1.208,
+        "total_expected_goals": 2.154,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.4288,
+        "over_2_5_goals": 0.3648,
+        "over_1_5_goals": 0.634,
+        "home_win": 0.2875,
+        "draw": 0.2917,
+        "away_win": 0.4209
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 560584,
+      "home_team": "Everton FC",
+      "away_team": "Ipswich Town FC",
+      "kickoff_utc": "2026-09-19T14:00:00Z",
+      "league": "Premier League",
+      "league_country": "England",
+      "model_lambdas": {
+        "home_expected_goals": 2.34,
+        "away_expected_goals": 1.167,
+        "total_expected_goals": 3.507,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.6222,
+        "over_2_5_goals": 0.6804,
+        "over_1_5_goals": 0.8648,
+        "home_win": 0.6353,
+        "draw": 0.1879,
+        "away_win": 0.1768
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 560586,
+      "home_team": "Brighton & Hove Albion FC",
+      "away_team": "Arsenal FC",
+      "kickoff_utc": "2026-09-19T14:00:00Z",
+      "league": "Premier League",
+      "league_country": "England",
+      "model_lambdas": {
+        "home_expected_goals": 1.575,
+        "away_expected_goals": 1.708,
+        "total_expected_goals": 3.284,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.6494,
+        "over_2_5_goals": 0.6373,
+        "over_1_5_goals": 0.8394,
+        "home_win": 0.3567,
+        "draw": 0.2304,
+        "away_win": 0.4129
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 560588,
+      "home_team": "Newcastle United FC",
+      "away_team": "Hull City AFC",
+      "kickoff_utc": "2026-09-19T14:00:00Z",
+      "league": "Premier League",
+      "league_country": "England",
+      "model_lambdas": {
+        "home_expected_goals": 1.08,
+        "away_expected_goals": 1.167,
+        "total_expected_goals": 2.247,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.4547,
+        "over_2_5_goals": 0.3897,
+        "over_1_5_goals": 0.6566,
+        "home_win": 0.3348,
+        "draw": 0.2873,
+        "away_win": 0.3779
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 560589,
+      "home_team": "Nottingham Forest FC",
+      "away_team": "Coventry City FC",
+      "kickoff_utc": "2026-09-19T16:30:00Z",
+      "league": "Premier League",
+      "league_country": "England",
+      "model_lambdas": {
+        "home_expected_goals": 1.26,
+        "away_expected_goals": 0.5,
+        "total_expected_goals": 1.76,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.2819,
+        "over_2_5_goals": 0.2588,
+        "over_1_5_goals": 0.5253,
+        "home_win": 0.5541,
+        "draw": 0.2987,
+        "away_win": 0.1472
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564670,
+      "home_team": "Real Racing Club de Santander",
+      "away_team": "Deportivo Alav\u00e9s",
+      "kickoff_utc": "2026-09-12T12:00:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 1.35,
+        "away_expected_goals": 2.25,
+        "total_expected_goals": 3.6,
         "expected_cards": 3.6
       },
       "model_projections": {
         "btts_yes": 0.6627,
-        "over_2_5_goals": 0.6544,
-        "over_1_5_goals": 0.8497,
-        "home_win": 0.3593,
-        "draw": 0.2271,
-        "away_win": 0.4136
+        "over_2_5_goals": 0.6973,
+        "over_1_5_goals": 0.8743,
+        "home_win": 0.2232,
+        "draw": 0.1992,
+        "away_win": 0.5776
       },
       "using_xg": false,
       "bets": [],
@@ -318,25 +448,25 @@
       "odds_available": false
     },
     {
-      "fixture_id": 565794,
-      "home_team": "TSG 1899 Hoffenheim",
-      "away_team": "VfB Stuttgart",
-      "kickoff_utc": "2026-09-12T13:30:00Z",
-      "league": "Bundesliga",
-      "league_country": "Germany",
+      "fixture_id": 564673,
+      "home_team": "CA Osasuna",
+      "away_team": "RCD Espanyol de Barcelona",
+      "kickoff_utc": "2026-09-12T14:15:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
       "model_lambdas": {
-        "home_expected_goals": 2.34,
-        "away_expected_goals": 2.833,
-        "total_expected_goals": 5.173,
+        "home_expected_goals": 1.35,
+        "away_expected_goals": 1.5,
+        "total_expected_goals": 2.85,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.8505,
-        "over_2_5_goals": 0.8892,
-        "over_1_5_goals": 0.965,
-        "home_win": 0.3279,
-        "draw": 0.1765,
-        "away_win": 0.4956
+        "btts_yes": 0.5755,
+        "over_2_5_goals": 0.5424,
+        "over_1_5_goals": 0.7773,
+        "home_win": 0.3416,
+        "draw": 0.2495,
+        "away_win": 0.409
       },
       "using_xg": false,
       "bets": [],
@@ -344,129 +474,25 @@
       "odds_available": false
     },
     {
-      "fixture_id": 565795,
-      "home_team": "Borussia Dortmund",
-      "away_team": "SC Paderborn 07",
-      "kickoff_utc": "2026-09-12T13:30:00Z",
-      "league": "Bundesliga",
-      "league_country": "Germany",
-      "model_lambdas": {
-        "home_expected_goals": 1.71,
-        "away_expected_goals": 0.666,
-        "total_expected_goals": 2.377,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.3985,
-        "over_2_5_goals": 0.4242,
-        "over_1_5_goals": 0.6864,
-        "home_win": 0.6257,
-        "draw": 0.233,
-        "away_win": 0.1413
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 565796,
-      "home_team": "FC Augsburg",
-      "away_team": "Bayer 04 Leverkusen",
-      "kickoff_utc": "2026-09-12T13:30:00Z",
-      "league": "Bundesliga",
-      "league_country": "Germany",
-      "model_lambdas": {
-        "home_expected_goals": 2.7,
-        "away_expected_goals": 1.75,
-        "total_expected_goals": 4.45,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.7707,
-        "over_2_5_goals": 0.8207,
-        "over_1_5_goals": 0.9364,
-        "home_win": 0.5805,
-        "draw": 0.1786,
-        "away_win": 0.2409
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 565801,
-      "home_team": "1. FSV Mainz 05",
-      "away_team": "Eintracht Frankfurt",
-      "kickoff_utc": "2026-09-12T13:30:00Z",
-      "league": "Bundesliga",
-      "league_country": "Germany",
-      "model_lambdas": {
-        "home_expected_goals": 3.24,
-        "away_expected_goals": 1.0,
-        "total_expected_goals": 4.24,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.6074,
-        "over_2_5_goals": 0.795,
-        "over_1_5_goals": 0.9245,
-        "home_win": 0.8046,
-        "draw": 0.1157,
-        "away_win": 0.0797
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 565802,
-      "home_team": "SC Freiburg",
-      "away_team": "Borussia M\u00f6nchengladbach",
-      "kickoff_utc": "2026-09-12T13:30:00Z",
-      "league": "Bundesliga",
-      "league_country": "Germany",
-      "model_lambdas": {
-        "home_expected_goals": 3.24,
-        "away_expected_goals": 1.0,
-        "total_expected_goals": 4.24,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.6074,
-        "over_2_5_goals": 0.795,
-        "over_1_5_goals": 0.9245,
-        "home_win": 0.8046,
-        "draw": 0.1157,
-        "away_win": 0.0797
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 565798,
-      "home_team": "1. FC K\u00f6ln",
-      "away_team": "SV Werder Bremen",
+      "fixture_id": 564676,
+      "home_team": "Athletic Club",
+      "away_team": "Elche CF",
       "kickoff_utc": "2026-09-12T16:30:00Z",
-      "league": "Bundesliga",
-      "league_country": "Germany",
+      "league": "La Liga",
+      "league_country": "Spain",
       "model_lambdas": {
         "home_expected_goals": 2.43,
-        "away_expected_goals": 2.5,
-        "total_expected_goals": 4.93,
+        "away_expected_goals": 1.25,
+        "total_expected_goals": 3.68,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.8371,
-        "over_2_5_goals": 0.8693,
-        "over_1_5_goals": 0.9571,
-        "home_win": 0.3953,
-        "draw": 0.1848,
-        "away_win": 0.4198
+        "btts_yes": 0.6507,
+        "over_2_5_goals": 0.7112,
+        "over_1_5_goals": 0.882,
+        "home_win": 0.6338,
+        "draw": 0.1839,
+        "away_win": 0.1824
       },
       "using_xg": false,
       "bets": [],
@@ -474,51 +500,25 @@
       "odds_available": false
     },
     {
-      "fixture_id": 565799,
-      "home_team": "RB Leipzig",
-      "away_team": "Hamburger SV",
-      "kickoff_utc": "2026-09-13T13:30:00Z",
-      "league": "Bundesliga",
-      "league_country": "Germany",
+      "fixture_id": 564677,
+      "home_team": "Real Madrid CF",
+      "away_team": "Rayo Vallecano de Madrid",
+      "kickoff_utc": "2026-09-12T19:00:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
       "model_lambdas": {
-        "home_expected_goals": 2.79,
-        "away_expected_goals": 1.167,
-        "total_expected_goals": 3.957,
+        "home_expected_goals": 2.646,
+        "away_expected_goals": 1.275,
+        "total_expected_goals": 3.921,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.6463,
-        "over_2_5_goals": 0.7555,
-        "over_1_5_goals": 0.9052,
-        "home_win": 0.7122,
-        "draw": 0.1546,
-        "away_win": 0.1332
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 565800,
-      "home_team": "SV 07 Elversberg",
-      "away_team": "FC Bayern M\u00fcnchen",
-      "kickoff_utc": "2026-09-13T15:30:00Z",
-      "league": "Bundesliga",
-      "league_country": "Germany",
-      "model_lambdas": {
-        "home_expected_goals": 2.07,
-        "away_expected_goals": 2.917,
-        "total_expected_goals": 4.986,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.8265,
-        "over_2_5_goals": 0.8742,
-        "over_1_5_goals": 0.9591,
-        "home_win": 0.2694,
-        "draw": 0.1723,
-        "away_win": 0.5583
+        "btts_yes": 0.6695,
+        "over_2_5_goals": 0.7501,
+        "over_1_5_goals": 0.9025,
+        "home_win": 0.6666,
+        "draw": 0.1694,
+        "away_win": 0.164
       },
       "using_xg": false,
       "bets": [],
