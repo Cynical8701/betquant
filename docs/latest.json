@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T12:20:22.874003+00:00",
+  "generated_at": "2026-09-17T12:20:36.964156+00:00",
   "dry_run": false,
   "total_fixtures": 20,
   "total_tier1_bets": 0,
@@ -266,110 +266,6 @@
       "odds_available": false
     },
     {
-      "fixture_id": 564679,
-      "home_team": "RC Deportivo La Coru\u00f1a",
-      "away_team": "Sevilla FC",
-      "kickoff_utc": "2026-09-16T17:00:00Z",
-      "league": "La Liga",
-      "league_country": "Spain",
-      "model_lambdas": {
-        "home_expected_goals": 1.62,
-        "away_expected_goals": 1.4,
-        "total_expected_goals": 3.02,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.6043,
-        "over_2_5_goals": 0.5813,
-        "over_1_5_goals": 0.8038,
-        "home_win": 0.4279,
-        "draw": 0.2405,
-        "away_win": 0.3316
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 564684,
-      "home_team": "Club Atl\u00e9tico de Madrid",
-      "away_team": "CA Osasuna",
-      "kickoff_utc": "2026-09-16T17:00:00Z",
-      "league": "La Liga",
-      "league_country": "Spain",
-      "model_lambdas": {
-        "home_expected_goals": 1.854,
-        "away_expected_goals": 1.167,
-        "total_expected_goals": 3.02,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.5807,
-        "over_2_5_goals": 0.5813,
-        "over_1_5_goals": 0.8039,
-        "home_win": 0.5344,
-        "draw": 0.227,
-        "away_win": 0.2385
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 564685,
-      "home_team": "Levante UD",
-      "away_team": "Athletic Club",
-      "kickoff_utc": "2026-09-16T19:30:00Z",
-      "league": "La Liga",
-      "league_country": "Spain",
-      "model_lambdas": {
-        "home_expected_goals": 1.404,
-        "away_expected_goals": 1.6,
-        "total_expected_goals": 3.004,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.6021,
-        "over_2_5_goals": 0.5777,
-        "over_1_5_goals": 0.8014,
-        "home_win": 0.3362,
-        "draw": 0.2416,
-        "away_win": 0.4222
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 564687,
-      "home_team": "FC Barcelona",
-      "away_team": "Real Racing Club de Santander",
-      "kickoff_utc": "2026-09-16T19:30:00Z",
-      "league": "La Liga",
-      "league_country": "Spain",
-      "model_lambdas": {
-        "home_expected_goals": 3.312,
-        "away_expected_goals": 1.317,
-        "total_expected_goals": 4.628,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.7052,
-        "over_2_5_goals": 0.8403,
-        "over_1_5_goals": 0.945,
-        "home_win": 0.7574,
-        "draw": 0.1286,
-        "away_win": 0.114
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
       "fixture_id": 564686,
       "home_team": "Real Betis Balompi\u00e9",
       "away_team": "Getafe CF",
@@ -455,18 +351,18 @@
       "league": "La Liga",
       "league_country": "Spain",
       "model_lambdas": {
-        "home_expected_goals": 1.89,
-        "away_expected_goals": 1.634,
-        "total_expected_goals": 3.524,
+        "home_expected_goals": 1.8,
+        "away_expected_goals": 1.833,
+        "total_expected_goals": 3.633,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.6832,
-        "over_2_5_goals": 0.6835,
-        "over_1_5_goals": 0.8666,
-        "home_win": 0.4422,
-        "draw": 0.2202,
-        "away_win": 0.3376
+        "btts_yes": 0.7012,
+        "over_2_5_goals": 0.7031,
+        "over_1_5_goals": 0.8775,
+        "home_win": 0.3841,
+        "draw": 0.2182,
+        "away_win": 0.3977
       },
       "using_xg": false,
       "bets": [],
@@ -507,18 +403,122 @@
       "league": "La Liga",
       "league_country": "Spain",
       "model_lambdas": {
-        "home_expected_goals": 1.242,
-        "away_expected_goals": 1.4,
-        "total_expected_goals": 2.642,
+        "home_expected_goals": 1.71,
+        "away_expected_goals": 1.417,
+        "total_expected_goals": 3.127,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.5358,
-        "over_2_5_goals": 0.4921,
-        "over_1_5_goals": 0.7406,
-        "home_win": 0.333,
-        "draw": 0.2605,
-        "away_win": 0.4065
+        "btts_yes": 0.6205,
+        "over_2_5_goals": 0.6046,
+        "over_1_5_goals": 0.819,
+        "home_win": 0.4458,
+        "draw": 0.2347,
+        "away_win": 0.3195
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564690,
+      "home_team": "Sevilla FC",
+      "away_team": "FC Barcelona",
+      "kickoff_utc": "2026-09-19T19:00:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 1.35,
+        "away_expected_goals": 2.857,
+        "total_expected_goals": 4.207,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.6982,
+        "over_2_5_goals": 0.7907,
+        "over_1_5_goals": 0.9225,
+        "home_win": 0.1559,
+        "draw": 0.1581,
+        "away_win": 0.6859
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564697,
+      "home_team": "Getafe CF",
+      "away_team": "M\u00e1laga CF",
+      "kickoff_utc": "2026-09-20T12:00:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 1.188,
+        "away_expected_goals": 0.8,
+        "total_expected_goals": 1.988,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.3828,
+        "over_2_5_goals": 0.3201,
+        "over_1_5_goals": 0.5907,
+        "home_win": 0.4503,
+        "draw": 0.3015,
+        "away_win": 0.2481
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564688,
+      "home_team": "Club Atl\u00e9tico de Madrid",
+      "away_team": "Real Madrid CF",
+      "kickoff_utc": "2026-09-20T14:15:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 1.697,
+        "away_expected_goals": 1.929,
+        "total_expected_goals": 3.626,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.6981,
+        "over_2_5_goals": 0.7018,
+        "over_1_5_goals": 0.8768,
+        "home_win": 0.3448,
+        "draw": 0.2171,
+        "away_win": 0.438
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564695,
+      "home_team": "RC Deportivo La Coru\u00f1a",
+      "away_team": "Real Betis Balompi\u00e9",
+      "kickoff_utc": "2026-09-20T16:30:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 1.53,
+        "away_expected_goals": 1.417,
+        "total_expected_goals": 2.947,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.5935,
+        "over_2_5_goals": 0.5648,
+        "over_1_5_goals": 0.7928,
+        "home_win": 0.4025,
+        "draw": 0.2451,
+        "away_win": 0.3525
       },
       "using_xg": false,
       "bets": [],
