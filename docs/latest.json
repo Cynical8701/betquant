@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T12:20:36.964156+00:00",
+  "generated_at": "2026-09-18T12:00:22.964690+00:00",
   "dry_run": false,
   "total_fixtures": 20,
   "total_tier1_bets": 0,
@@ -266,58 +266,6 @@
       "odds_available": false
     },
     {
-      "fixture_id": 564686,
-      "home_team": "Real Betis Balompi\u00e9",
-      "away_team": "Getafe CF",
-      "kickoff_utc": "2026-09-17T17:00:00Z",
-      "league": "La Liga",
-      "league_country": "Spain",
-      "model_lambdas": {
-        "home_expected_goals": 1.548,
-        "away_expected_goals": 0.966,
-        "total_expected_goals": 2.515,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.4878,
-        "over_2_5_goals": 0.4599,
-        "over_1_5_goals": 0.7157,
-        "home_win": 0.5085,
-        "draw": 0.2555,
-        "away_win": 0.236
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 564683,
-      "home_team": "M\u00e1laga CF",
-      "away_team": "Villarreal CF",
-      "kickoff_utc": "2026-09-17T19:30:00Z",
-      "league": "La Liga",
-      "league_country": "Spain",
-      "model_lambdas": {
-        "home_expected_goals": 1.386,
-        "away_expected_goals": 1.55,
-        "total_expected_goals": 2.936,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.5908,
-        "over_2_5_goals": 0.5624,
-        "over_1_5_goals": 0.7911,
-        "home_win": 0.3411,
-        "draw": 0.2451,
-        "away_win": 0.4138
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
       "fixture_id": 564692,
       "home_team": "RCD Espanyol de Barcelona",
       "away_team": "Elche CF",
@@ -455,18 +403,18 @@
       "league": "La Liga",
       "league_country": "Spain",
       "model_lambdas": {
-        "home_expected_goals": 1.188,
-        "away_expected_goals": 0.8,
-        "total_expected_goals": 1.988,
+        "home_expected_goals": 1.26,
+        "away_expected_goals": 0.834,
+        "total_expected_goals": 2.093,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.3828,
-        "over_2_5_goals": 0.3201,
-        "over_1_5_goals": 0.5907,
-        "home_win": 0.4503,
-        "draw": 0.3015,
-        "away_win": 0.2481
+        "btts_yes": 0.405,
+        "over_2_5_goals": 0.3486,
+        "over_1_5_goals": 0.6187,
+        "home_win": 0.4631,
+        "draw": 0.2909,
+        "away_win": 0.2459
       },
       "using_xg": false,
       "bets": [],
@@ -507,18 +455,70 @@
       "league": "La Liga",
       "league_country": "Spain",
       "model_lambdas": {
-        "home_expected_goals": 1.53,
-        "away_expected_goals": 1.417,
-        "total_expected_goals": 2.947,
+        "home_expected_goals": 1.427,
+        "away_expected_goals": 1.369,
+        "total_expected_goals": 2.796,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.5935,
-        "over_2_5_goals": 0.5648,
-        "over_1_5_goals": 0.7928,
-        "home_win": 0.4025,
-        "draw": 0.2451,
-        "away_win": 0.3525
+        "btts_yes": 0.5667,
+        "over_2_5_goals": 0.5296,
+        "over_1_5_goals": 0.7683,
+        "home_win": 0.3868,
+        "draw": 0.2529,
+        "away_win": 0.3604
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564696,
+      "home_team": "Villarreal CF",
+      "away_team": "Levante UD",
+      "kickoff_utc": "2026-09-20T16:30:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 1.898,
+        "away_expected_goals": 1.7,
+        "total_expected_goals": 3.598,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.6948,
+        "over_2_5_goals": 0.6968,
+        "over_1_5_goals": 0.8741,
+        "home_win": 0.4307,
+        "draw": 0.2184,
+        "away_win": 0.3508
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564689,
+      "home_team": "Valencia CF",
+      "away_team": "Real Sociedad de F\u00fatbol",
+      "kickoff_utc": "2026-09-20T19:00:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 1.17,
+        "away_expected_goals": 1.333,
+        "total_expected_goals": 2.503,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.5078,
+        "over_2_5_goals": 0.457,
+        "over_1_5_goals": 0.7133,
+        "home_win": 0.3266,
+        "draw": 0.2687,
+        "away_win": 0.4046
       },
       "using_xg": false,
       "bets": [],
