@@ -1,8 +1,61 @@
 {
-  "generated_at": "2026-10-01T13:58:03.280641+00:00",
+  "generated_at": "2026-10-02T13:16:09.716397+00:00",
   "dry_run": false,
-  "total_fixtures": 0,
+  "total_fixtures": 2,
   "total_tier1_bets": 0,
   "total_tier2_bets": 0,
-  "fixtures": []
+  "fixtures": [
+    {
+      "fixture_id": 564706,
+      "home_team": "M\u00e1laga CF",
+      "away_team": "RCD Espanyol de Barcelona",
+      "kickoff_utc": "2026-10-09T19:00:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 1.003,
+        "away_expected_goals": 1.571,
+        "total_expected_goals": 2.575,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.5018,
+        "over_2_5_goals": 0.4752,
+        "over_1_5_goals": 0.7277,
+        "home_win": 0.2418,
+        "draw": 0.2528,
+        "away_win": 0.5055
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 565820,
+      "home_team": "Borussia Dortmund",
+      "away_team": "SV Werder Bremen",
+      "kickoff_utc": "2026-10-09T18:30:00Z",
+      "league": "Bundesliga",
+      "league_country": "Germany",
+      "model_lambdas": {
+        "home_expected_goals": 2.376,
+        "away_expected_goals": 1.4,
+        "total_expected_goals": 3.776,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.6834,
+        "over_2_5_goals": 0.7272,
+        "over_1_5_goals": 0.8906,
+        "home_win": 0.5916,
+        "draw": 0.1915,
+        "away_win": 0.2169
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    }
+  ]
 }
