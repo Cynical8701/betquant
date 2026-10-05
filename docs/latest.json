@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-04T12:59:25.579407+00:00",
+  "generated_at": "2026-10-05T15:25:56.559228+00:00",
   "dry_run": false,
   "total_fixtures": 20,
   "total_tier1_bets": 0,
@@ -91,18 +91,18 @@
       "league": "Premier League",
       "league_country": "England",
       "model_lambdas": {
-        "home_expected_goals": 1.566,
-        "away_expected_goals": 1.15,
-        "total_expected_goals": 2.716,
+        "home_expected_goals": 1.458,
+        "away_expected_goals": 1.75,
+        "total_expected_goals": 3.208,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.5406,
-        "over_2_5_goals": 0.5103,
-        "over_1_5_goals": 0.7542,
-        "home_win": 0.4695,
-        "draw": 0.2509,
-        "away_win": 0.2796
+        "btts_yes": 0.634,
+        "over_2_5_goals": 0.6218,
+        "over_1_5_goals": 0.8298,
+        "home_win": 0.3222,
+        "draw": 0.2314,
+        "away_win": 0.4464
       },
       "using_xg": false,
       "bets": [],
@@ -233,6 +233,32 @@
         "home_win": 0.2897,
         "draw": 0.2409,
         "away_win": 0.4694
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 560597,
+      "home_team": "Coventry City FC",
+      "away_team": "Newcastle United FC",
+      "kickoff_utc": "2026-10-12T19:00:00Z",
+      "league": "Premier League",
+      "league_country": "England",
+      "model_lambdas": {
+        "home_expected_goals": 1.08,
+        "away_expected_goals": 1.9,
+        "total_expected_goals": 2.98,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.5616,
+        "over_2_5_goals": 0.5723,
+        "over_1_5_goals": 0.7978,
+        "home_win": 0.2126,
+        "draw": 0.2224,
+        "away_win": 0.565
       },
       "using_xg": false,
       "bets": [],
@@ -474,51 +500,25 @@
       "odds_available": false
     },
     {
-      "fixture_id": 565820,
-      "home_team": "Borussia Dortmund",
-      "away_team": "SV Werder Bremen",
-      "kickoff_utc": "2026-10-09T18:30:00Z",
-      "league": "Bundesliga",
-      "league_country": "Germany",
+      "fixture_id": 564704,
+      "home_team": "Levante UD",
+      "away_team": "Sevilla FC",
+      "kickoff_utc": "2026-10-12T19:00:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
       "model_lambdas": {
-        "home_expected_goals": 2.376,
-        "away_expected_goals": 1.4,
-        "total_expected_goals": 3.776,
+        "home_expected_goals": 1.414,
+        "away_expected_goals": 1.715,
+        "total_expected_goals": 3.129,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.6834,
-        "over_2_5_goals": 0.7272,
-        "over_1_5_goals": 0.8906,
-        "home_win": 0.5916,
-        "draw": 0.1915,
-        "away_win": 0.2169
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 565812,
-      "home_team": "1. FSV Mainz 05",
-      "away_team": "Bayer 04 Leverkusen",
-      "kickoff_utc": "2026-10-10T13:30:00Z",
-      "league": "Bundesliga",
-      "league_country": "Germany",
-      "model_lambdas": {
-        "home_expected_goals": 2.025,
-        "away_expected_goals": 2.0,
-        "total_expected_goals": 4.025,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.7505,
-        "over_2_5_goals": 0.7655,
-        "over_1_5_goals": 0.9102,
-        "home_win": 0.4017,
-        "draw": 0.2063,
-        "away_win": 0.392
+        "btts_yes": 0.6206,
+        "over_2_5_goals": 0.605,
+        "over_1_5_goals": 0.8193,
+        "home_win": 0.3182,
+        "draw": 0.2345,
+        "away_win": 0.4473
       },
       "using_xg": false,
       "bets": [],
