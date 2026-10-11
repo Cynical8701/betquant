@@ -1,192 +1,10 @@
 {
-  "generated_at": "2026-10-10T13:11:04.410236+00:00",
+  "generated_at": "2026-10-11T13:40:03.730976+00:00",
   "dry_run": false,
   "total_fixtures": 20,
   "total_tier1_bets": 0,
   "total_tier2_bets": 0,
   "fixtures": [
-    {
-      "fixture_id": 560592,
-      "home_team": "Sunderland AFC",
-      "away_team": "Brighton & Hove Albion FC",
-      "kickoff_utc": "2026-10-10T14:00:00Z",
-      "league": "Premier League",
-      "league_country": "England",
-      "model_lambdas": {
-        "home_expected_goals": 1.188,
-        "away_expected_goals": 2.6,
-        "total_expected_goals": 3.788,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.6435,
-        "over_2_5_goals": 0.7292,
-        "over_1_5_goals": 0.8916,
-        "home_win": 0.1538,
-        "draw": 0.1692,
-        "away_win": 0.677
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 560595,
-      "home_team": "Chelsea FC",
-      "away_team": "AFC Bournemouth",
-      "kickoff_utc": "2026-10-10T14:00:00Z",
-      "league": "Premier League",
-      "league_country": "England",
-      "model_lambdas": {
-        "home_expected_goals": 1.944,
-        "away_expected_goals": 1.8,
-        "total_expected_goals": 3.744,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.7152,
-        "over_2_5_goals": 0.7219,
-        "over_1_5_goals": 0.8878,
-        "home_win": 0.4215,
-        "draw": 0.2141,
-        "away_win": 0.3643
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 560599,
-      "home_team": "Ipswich Town FC",
-      "away_team": "Fulham FC",
-      "kickoff_utc": "2026-10-10T14:00:00Z",
-      "league": "Premier League",
-      "league_country": "England",
-      "model_lambdas": {
-        "home_expected_goals": 1.62,
-        "away_expected_goals": 1.6,
-        "total_expected_goals": 3.22,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.6402,
-        "over_2_5_goals": 0.6243,
-        "over_1_5_goals": 0.8314,
-        "home_win": 0.3875,
-        "draw": 0.2334,
-        "away_win": 0.379
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 560601,
-      "home_team": "Aston Villa FC",
-      "away_team": "Brentford FC",
-      "kickoff_utc": "2026-10-10T14:00:00Z",
-      "league": "Premier League",
-      "league_country": "England",
-      "model_lambdas": {
-        "home_expected_goals": 1.332,
-        "away_expected_goals": 1.567,
-        "total_expected_goals": 2.899,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.5824,
-        "over_2_5_goals": 0.5537,
-        "over_1_5_goals": 0.7852,
-        "home_win": 0.3248,
-        "draw": 0.2459,
-        "away_win": 0.4292
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 560600,
-      "home_team": "Manchester United FC",
-      "away_team": "Tottenham Hotspur FC",
-      "kickoff_utc": "2026-10-10T16:30:00Z",
-      "league": "Premier League",
-      "league_country": "England",
-      "model_lambdas": {
-        "home_expected_goals": 1.944,
-        "away_expected_goals": 0.867,
-        "total_expected_goals": 2.811,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.4966,
-        "over_2_5_goals": 0.533,
-        "over_1_5_goals": 0.7707,
-        "home_win": 0.6262,
-        "draw": 0.2131,
-        "away_win": 0.1607
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 560594,
-      "home_team": "Hull City AFC",
-      "away_team": "Everton FC",
-      "kickoff_utc": "2026-10-11T13:00:00Z",
-      "league": "Premier League",
-      "league_country": "England",
-      "model_lambdas": {
-        "home_expected_goals": 0.972,
-        "away_expected_goals": 1.0,
-        "total_expected_goals": 1.972,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.393,
-        "over_2_5_goals": 0.3157,
-        "over_1_5_goals": 0.5864,
-        "home_win": 0.3371,
-        "draw": 0.3111,
-        "away_win": 0.3518
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 560596,
-      "home_team": "Crystal Palace FC",
-      "away_team": "Nottingham Forest FC",
-      "kickoff_utc": "2026-10-11T13:00:00Z",
-      "league": "Premier League",
-      "league_country": "England",
-      "model_lambdas": {
-        "home_expected_goals": 1.188,
-        "away_expected_goals": 1.5,
-        "total_expected_goals": 2.688,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.5401,
-        "over_2_5_goals": 0.5034,
-        "over_1_5_goals": 0.7492,
-        "home_win": 0.3007,
-        "draw": 0.2552,
-        "away_win": 0.4442
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
     {
       "fixture_id": 560598,
       "home_team": "Liverpool FC",
@@ -247,18 +65,18 @@
       "league": "Premier League",
       "league_country": "England",
       "model_lambdas": {
-        "home_expected_goals": 1.944,
-        "away_expected_goals": 1.3,
-        "total_expected_goals": 3.244,
+        "home_expected_goals": 1.818,
+        "away_expected_goals": 1.55,
+        "total_expected_goals": 3.368,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.6233,
-        "over_2_5_goals": 0.6292,
-        "over_1_5_goals": 0.8345,
-        "home_win": 0.5244,
-        "draw": 0.2204,
-        "away_win": 0.2551
+        "btts_yes": 0.6599,
+        "over_2_5_goals": 0.6541,
+        "over_1_5_goals": 0.8495,
+        "home_win": 0.443,
+        "draw": 0.2256,
+        "away_win": 0.3314
       },
       "using_xg": false,
       "bets": [],
@@ -273,18 +91,18 @@
       "league": "Premier League",
       "league_country": "England",
       "model_lambdas": {
-        "home_expected_goals": 0.972,
-        "away_expected_goals": 1.4,
-        "total_expected_goals": 2.372,
+        "home_expected_goals": 1.242,
+        "away_expected_goals": 1.484,
+        "total_expected_goals": 2.726,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.4684,
-        "over_2_5_goals": 0.423,
-        "over_1_5_goals": 0.6854,
-        "home_win": 0.2612,
-        "draw": 0.2706,
-        "away_win": 0.4682
+        "btts_yes": 0.5499,
+        "over_2_5_goals": 0.5126,
+        "over_1_5_goals": 0.7559,
+        "home_win": 0.3174,
+        "draw": 0.2546,
+        "away_win": 0.428
       },
       "using_xg": false,
       "bets": [],
@@ -299,18 +117,18 @@
       "league": "Premier League",
       "league_country": "England",
       "model_lambdas": {
-        "home_expected_goals": 2.538,
-        "away_expected_goals": 1.116,
-        "total_expected_goals": 3.655,
+        "home_expected_goals": 2.43,
+        "away_expected_goals": 1.167,
+        "total_expected_goals": 3.597,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.6194,
-        "over_2_5_goals": 0.7068,
-        "over_1_5_goals": 0.8796,
-        "home_win": 0.6817,
-        "draw": 0.1707,
-        "away_win": 0.1476
+        "btts_yes": 0.6279,
+        "over_2_5_goals": 0.6966,
+        "over_1_5_goals": 0.874,
+        "home_win": 0.6518,
+        "draw": 0.181,
+        "away_win": 0.1671
       },
       "using_xg": false,
       "bets": [],
@@ -325,18 +143,18 @@
       "league": "Premier League",
       "league_country": "England",
       "model_lambdas": {
-        "home_expected_goals": 1.152,
-        "away_expected_goals": 1.4,
-        "total_expected_goals": 2.552,
+        "home_expected_goals": 1.53,
+        "away_expected_goals": 1.25,
+        "total_expected_goals": 2.78,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.5153,
-        "over_2_5_goals": 0.4694,
-        "over_1_5_goals": 0.7232,
-        "home_win": 0.3094,
-        "draw": 0.2643,
-        "away_win": 0.4263
+        "btts_yes": 0.559,
+        "over_2_5_goals": 0.5257,
+        "over_1_5_goals": 0.7655,
+        "home_win": 0.4379,
+        "draw": 0.251,
+        "away_win": 0.311
       },
       "using_xg": false,
       "bets": [],
@@ -351,18 +169,18 @@
       "league": "Premier League",
       "league_country": "England",
       "model_lambdas": {
-        "home_expected_goals": 1.962,
-        "away_expected_goals": 1.484,
-        "total_expected_goals": 3.445,
+        "home_expected_goals": 1.975,
+        "away_expected_goals": 1.543,
+        "total_expected_goals": 3.518,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.6644,
-        "over_2_5_goals": 0.6689,
-        "over_1_5_goals": 0.8582,
-        "home_win": 0.4887,
-        "draw": 0.2186,
-        "away_win": 0.2927
+        "btts_yes": 0.6771,
+        "over_2_5_goals": 0.6824,
+        "over_1_5_goals": 0.866,
+        "home_win": 0.4791,
+        "draw": 0.2173,
+        "away_win": 0.3036
       },
       "using_xg": false,
       "bets": [],
@@ -370,25 +188,25 @@
       "odds_available": false
     },
     {
-      "fixture_id": 564699,
-      "home_team": "Deportivo Alav\u00e9s",
-      "away_team": "Club Atl\u00e9tico de Madrid",
-      "kickoff_utc": "2026-10-10T14:15:00Z",
-      "league": "La Liga",
-      "league_country": "Spain",
+      "fixture_id": 560604,
+      "home_team": "AFC Bournemouth",
+      "away_team": "Sunderland AFC",
+      "kickoff_utc": "2026-10-18T13:00:00Z",
+      "league": "Premier League",
+      "league_country": "England",
       "model_lambdas": {
-        "home_expected_goals": 1.456,
-        "away_expected_goals": 1.491,
-        "total_expected_goals": 2.947,
+        "home_expected_goals": 1.71,
+        "away_expected_goals": 1.583,
+        "total_expected_goals": 3.294,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.5942,
-        "over_2_5_goals": 0.5648,
-        "over_1_5_goals": 0.7928,
-        "home_win": 0.3695,
-        "draw": 0.2455,
-        "away_win": 0.3851
+        "btts_yes": 0.651,
+        "over_2_5_goals": 0.6393,
+        "over_1_5_goals": 0.8406,
+        "home_win": 0.4117,
+        "draw": 0.23,
+        "away_win": 0.3583
       },
       "using_xg": false,
       "bets": [],
@@ -396,25 +214,25 @@
       "odds_available": false
     },
     {
-      "fixture_id": 564700,
-      "home_team": "FC Barcelona",
-      "away_team": "Getafe CF",
-      "kickoff_utc": "2026-10-10T16:30:00Z",
-      "league": "La Liga",
-      "league_country": "Spain",
+      "fixture_id": 560605,
+      "home_team": "Leeds United FC",
+      "away_team": "Manchester United FC",
+      "kickoff_utc": "2026-10-18T13:00:00Z",
+      "league": "Premier League",
+      "league_country": "England",
       "model_lambdas": {
-        "home_expected_goals": 2.97,
-        "away_expected_goals": 0.785,
-        "total_expected_goals": 3.756,
+        "home_expected_goals": 1.414,
+        "away_expected_goals": 1.345,
+        "total_expected_goals": 2.759,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.5162,
-        "over_2_5_goals": 0.7238,
-        "over_1_5_goals": 0.8888,
-        "home_win": 0.812,
-        "draw": 0.1193,
-        "away_win": 0.0687
+        "btts_yes": 0.5597,
+        "over_2_5_goals": 0.5208,
+        "over_1_5_goals": 0.7619,
+        "home_win": 0.3884,
+        "draw": 0.2548,
+        "away_win": 0.3568
       },
       "using_xg": false,
       "bets": [],
@@ -422,25 +240,25 @@
       "odds_available": false
     },
     {
-      "fixture_id": 564702,
-      "home_team": "Real Madrid CF",
-      "away_team": "Villarreal CF",
-      "kickoff_utc": "2026-10-10T19:00:00Z",
-      "league": "La Liga",
-      "league_country": "Spain",
+      "fixture_id": 560609,
+      "home_team": "Brighton & Hove Albion FC",
+      "away_team": "Crystal Palace FC",
+      "kickoff_utc": "2026-10-18T13:00:00Z",
+      "league": "Premier League",
+      "league_country": "England",
       "model_lambdas": {
-        "home_expected_goals": 2.363,
-        "away_expected_goals": 1.5,
-        "total_expected_goals": 3.863,
+        "home_expected_goals": 2.808,
+        "away_expected_goals": 1.016,
+        "total_expected_goals": 3.825,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.7037,
-        "over_2_5_goals": 0.741,
-        "over_1_5_goals": 0.8978,
-        "home_win": 0.568,
-        "draw": 0.1941,
-        "away_win": 0.2379
+        "btts_yes": 0.5996,
+        "over_2_5_goals": 0.735,
+        "over_1_5_goals": 0.8947,
+        "home_win": 0.7452,
+        "draw": 0.1455,
+        "away_win": 0.1092
       },
       "using_xg": false,
       "bets": [],
@@ -448,25 +266,25 @@
       "odds_available": false
     },
     {
-      "fixture_id": 564703,
-      "home_team": "Elche CF",
-      "away_team": "RC Celta de Vigo",
-      "kickoff_utc": "2026-10-11T12:00:00Z",
-      "league": "La Liga",
-      "league_country": "Spain",
+      "fixture_id": 560608,
+      "home_team": "Nottingham Forest FC",
+      "away_team": "Arsenal FC",
+      "kickoff_utc": "2026-10-18T15:30:00Z",
+      "league": "Premier League",
+      "league_country": "England",
       "model_lambdas": {
-        "home_expected_goals": 1.311,
-        "away_expected_goals": 1.786,
-        "total_expected_goals": 3.097,
+        "home_expected_goals": 0.818,
+        "away_expected_goals": 1.285,
+        "total_expected_goals": 2.103,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.608,
-        "over_2_5_goals": 0.5982,
-        "over_1_5_goals": 0.8149,
-        "home_win": 0.2821,
-        "draw": 0.2316,
-        "away_win": 0.4863
+        "btts_yes": 0.4041,
+        "over_2_5_goals": 0.3512,
+        "over_1_5_goals": 0.6212,
+        "home_win": 0.2371,
+        "draw": 0.2883,
+        "away_win": 0.4746
       },
       "using_xg": false,
       "bets": [],
@@ -519,6 +337,188 @@
         "home_win": 0.5666,
         "draw": 0.2292,
         "away_win": 0.2042
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564705,
+      "home_team": "Real Racing Club de Santander",
+      "away_team": "Valencia CF",
+      "kickoff_utc": "2026-10-11T19:00:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 1.851,
+        "away_expected_goals": 1.785,
+        "total_expected_goals": 3.637,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.7016,
+        "over_2_5_goals": 0.7037,
+        "over_1_5_goals": 0.8779,
+        "home_win": 0.4042,
+        "draw": 0.218,
+        "away_win": 0.3778
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564704,
+      "home_team": "Levante UD",
+      "away_team": "Sevilla FC",
+      "kickoff_utc": "2026-10-12T19:00:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 1.414,
+        "away_expected_goals": 1.715,
+        "total_expected_goals": 3.129,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.6206,
+        "over_2_5_goals": 0.605,
+        "over_1_5_goals": 0.8193,
+        "home_win": 0.3182,
+        "draw": 0.2345,
+        "away_win": 0.4473
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564716,
+      "home_team": "RC Deportivo La Coru\u00f1a",
+      "away_team": "Levante UD",
+      "kickoff_utc": "2026-10-16T19:00:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 1.852,
+        "away_expected_goals": 1.238,
+        "total_expected_goals": 3.09,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.5986,
+        "over_2_5_goals": 0.5966,
+        "over_1_5_goals": 0.8138,
+        "home_win": 0.5176,
+        "draw": 0.2273,
+        "away_win": 0.2551
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564710,
+      "home_team": "RCD Espanyol de Barcelona",
+      "away_team": "Club Atl\u00e9tico de Madrid",
+      "kickoff_utc": "2026-10-17T12:00:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 1.342,
+        "away_expected_goals": 1.743,
+        "total_expected_goals": 3.085,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.6095,
+        "over_2_5_goals": 0.5957,
+        "over_1_5_goals": 0.8133,
+        "home_win": 0.2965,
+        "draw": 0.2341,
+        "away_win": 0.4694
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564708,
+      "home_team": "Villarreal CF",
+      "away_team": "Elche CF",
+      "kickoff_utc": "2026-10-17T14:15:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 2.212,
+        "away_expected_goals": 1.675,
+        "total_expected_goals": 3.886,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.7236,
+        "over_2_5_goals": 0.7448,
+        "over_1_5_goals": 0.8997,
+        "home_win": 0.5022,
+        "draw": 0.2037,
+        "away_win": 0.2941
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564713,
+      "home_team": "Real Betis Balompi\u00e9",
+      "away_team": "FC Barcelona",
+      "kickoff_utc": "2026-10-17T16:30:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 1.29,
+        "away_expected_goals": 2.729,
+        "total_expected_goals": 4.019,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.6774,
+        "over_2_5_goals": 0.7647,
+        "over_1_5_goals": 0.9098,
+        "home_win": 0.1584,
+        "draw": 0.1642,
+        "away_win": 0.6773
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564711,
+      "home_team": "Valencia CF",
+      "away_team": "Athletic Club",
+      "kickoff_utc": "2026-10-17T19:00:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 0.848,
+        "away_expected_goals": 1.512,
+        "total_expected_goals": 2.36,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.4458,
+        "over_2_5_goals": 0.4199,
+        "over_1_5_goals": 0.6828,
+        "home_win": 0.2109,
+        "draw": 0.2603,
+        "away_win": 0.5288
       },
       "using_xg": false,
       "bets": [],
