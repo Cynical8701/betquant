@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T12:35:58.401966+00:00",
+  "generated_at": "2026-10-15T12:16:57.232863+00:00",
   "dry_run": false,
   "total_fixtures": 20,
   "total_tier1_bets": 0,
@@ -65,18 +65,18 @@
       "league": "Premier League",
       "league_country": "England",
       "model_lambdas": {
-        "home_expected_goals": 2.468,
-        "away_expected_goals": 1.107,
-        "total_expected_goals": 3.575,
+        "home_expected_goals": 2.43,
+        "away_expected_goals": 1.312,
+        "total_expected_goals": 3.743,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.6127,
-        "over_2_5_goals": 0.6929,
-        "over_1_5_goals": 0.8719,
-        "home_win": 0.6717,
-        "draw": 0.1757,
-        "away_win": 0.1526
+        "btts_yes": 0.6665,
+        "over_2_5_goals": 0.7217,
+        "over_1_5_goals": 0.8876,
+        "home_win": 0.6203,
+        "draw": 0.1857,
+        "away_win": 0.1939
       },
       "using_xg": false,
       "bets": [],
@@ -117,18 +117,18 @@
       "league": "Premier League",
       "league_country": "England",
       "model_lambdas": {
-        "home_expected_goals": 1.903,
-        "away_expected_goals": 1.726,
-        "total_expected_goals": 3.629,
+        "home_expected_goals": 1.778,
+        "away_expected_goals": 2.021,
+        "total_expected_goals": 3.799,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.6995,
-        "over_2_5_goals": 0.7024,
-        "over_1_5_goals": 0.8772,
-        "home_win": 0.4268,
-        "draw": 0.2176,
-        "away_win": 0.3557
+        "btts_yes": 0.7208,
+        "over_2_5_goals": 0.7309,
+        "over_1_5_goals": 0.8925,
+        "home_win": 0.3463,
+        "draw": 0.2115,
+        "away_win": 0.4422
       },
       "using_xg": false,
       "bets": [],
@@ -351,18 +351,18 @@
       "league": "La Liga",
       "league_country": "Spain",
       "model_lambdas": {
-        "home_expected_goals": 1.506,
-        "away_expected_goals": 2.761,
-        "total_expected_goals": 4.267,
+        "home_expected_goals": 1.566,
+        "away_expected_goals": 2.8,
+        "total_expected_goals": 4.366,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.729,
-        "over_2_5_goals": 0.7985,
-        "over_1_5_goals": 0.9261,
-        "home_win": 0.1912,
-        "draw": 0.1696,
-        "away_win": 0.6392
+        "btts_yes": 0.743,
+        "over_2_5_goals": 0.8108,
+        "over_1_5_goals": 0.9318,
+        "home_win": 0.1971,
+        "draw": 0.169,
+        "away_win": 0.6339
       },
       "using_xg": false,
       "bets": [],
@@ -481,18 +481,18 @@
       "league": "La Liga",
       "league_country": "Spain",
       "model_lambdas": {
-        "home_expected_goals": 2.07,
-        "away_expected_goals": 1.312,
-        "total_expected_goals": 3.382,
+        "home_expected_goals": 2.16,
+        "away_expected_goals": 1.413,
+        "total_expected_goals": 3.573,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.6386,
-        "over_2_5_goals": 0.6568,
-        "over_1_5_goals": 0.8511,
-        "home_win": 0.5488,
-        "draw": 0.2114,
-        "away_win": 0.2397
+        "btts_yes": 0.6692,
+        "over_2_5_goals": 0.6924,
+        "over_1_5_goals": 0.8716,
+        "home_win": 0.5459,
+        "draw": 0.2061,
+        "away_win": 0.248
       },
       "using_xg": false,
       "bets": [],
