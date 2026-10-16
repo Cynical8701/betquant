@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T12:16:57.232863+00:00",
+  "generated_at": "2026-10-16T12:02:40.639991+00:00",
   "dry_run": false,
   "total_fixtures": 20,
   "total_tier1_bets": 0,
@@ -266,6 +266,32 @@
       "odds_available": false
     },
     {
+      "fixture_id": 560620,
+      "home_team": "Ipswich Town FC",
+      "away_team": "Nottingham Forest FC",
+      "kickoff_utc": "2026-10-23T19:00:00Z",
+      "league": "Premier League",
+      "league_country": "England",
+      "model_lambdas": {
+        "home_expected_goals": 1.53,
+        "away_expected_goals": 1.417,
+        "total_expected_goals": 2.946,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.5934,
+        "over_2_5_goals": 0.5647,
+        "over_1_5_goals": 0.7927,
+        "home_win": 0.4026,
+        "draw": 0.2451,
+        "away_win": 0.3523
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
       "fixture_id": 564716,
       "home_team": "RC Deportivo La Coru\u00f1a",
       "away_team": "Levante UD",
@@ -493,32 +519,6 @@
         "home_win": 0.5459,
         "draw": 0.2061,
         "away_win": 0.248
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 564717,
-      "home_team": "Getafe CF",
-      "away_team": "Rayo Vallecano de Madrid",
-      "kickoff_utc": "2026-10-19T19:00:00Z",
-      "league": "La Liga",
-      "league_country": "Spain",
-      "model_lambdas": {
-        "home_expected_goals": 1.504,
-        "away_expected_goals": 1.41,
-        "total_expected_goals": 2.915,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.588,
-        "over_2_5_goals": 0.5575,
-        "over_1_5_goals": 0.7878,
-        "home_win": 0.3976,
-        "draw": 0.2467,
-        "away_win": 0.3557
       },
       "using_xg": false,
       "bets": [],
