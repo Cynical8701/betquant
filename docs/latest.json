@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T13:44:29.846325+00:00",
+  "generated_at": "2026-10-27T12:52:55.455052+00:00",
   "dry_run": false,
   "total_fixtures": 20,
   "total_tier1_bets": 0,
@@ -266,32 +266,6 @@
       "odds_available": false
     },
     {
-      "fixture_id": 564721,
-      "home_team": "Sevilla FC",
-      "away_team": "CA Osasuna",
-      "kickoff_utc": "2026-10-26T20:00:00Z",
-      "league": "La Liga",
-      "league_country": "Spain",
-      "model_lambdas": {
-        "home_expected_goals": 1.92,
-        "away_expected_goals": 1.445,
-        "total_expected_goals": 3.365,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.6521,
-        "over_2_5_goals": 0.6534,
-        "over_1_5_goals": 0.8491,
-        "home_win": 0.4878,
-        "draw": 0.2214,
-        "away_win": 0.2907
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
       "fixture_id": 564737,
       "home_team": "Villarreal CF",
       "away_team": "RCD Espanyol de Barcelona",
@@ -429,18 +403,18 @@
       "league": "La Liga",
       "league_country": "Spain",
       "model_lambdas": {
-        "home_expected_goals": 1.23,
-        "away_expected_goals": 1.528,
-        "total_expected_goals": 2.758,
+        "home_expected_goals": 1.134,
+        "away_expected_goals": 1.55,
+        "total_expected_goals": 2.684,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.5542,
-        "over_2_5_goals": 0.5205,
-        "over_1_5_goals": 0.7617,
-        "home_win": 0.3064,
-        "draw": 0.2518,
-        "away_win": 0.4419
+        "btts_yes": 0.5343,
+        "over_2_5_goals": 0.5024,
+        "over_1_5_goals": 0.7484,
+        "home_win": 0.2783,
+        "draw": 0.2526,
+        "away_win": 0.4691
       },
       "using_xg": false,
       "bets": [],
@@ -519,6 +493,32 @@
         "home_win": 0.4345,
         "draw": 0.2349,
         "away_win": 0.3306
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564731,
+      "home_team": "RC Deportivo La Coru\u00f1a",
+      "away_team": "CA Osasuna",
+      "kickoff_utc": "2026-11-02T20:00:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 1.782,
+        "away_expected_goals": 1.15,
+        "total_expected_goals": 2.932,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.5684,
+        "over_2_5_goals": 0.5614,
+        "over_1_5_goals": 0.7905,
+        "home_win": 0.5217,
+        "draw": 0.233,
+        "away_win": 0.2453
       },
       "using_xg": false,
       "bets": [],
