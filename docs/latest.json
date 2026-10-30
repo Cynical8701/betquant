@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T13:51:55.392611+00:00",
+  "generated_at": "2026-10-30T13:45:47.381190+00:00",
   "dry_run": false,
   "total_fixtures": 20,
   "total_tier1_bets": 0,
@@ -266,6 +266,32 @@
       "odds_available": false
     },
     {
+      "fixture_id": 560634,
+      "home_team": "Everton FC",
+      "away_team": "Coventry City FC",
+      "kickoff_utc": "2026-11-06T20:00:00Z",
+      "league": "Premier League",
+      "league_country": "England",
+      "model_lambdas": {
+        "home_expected_goals": 1.553,
+        "away_expected_goals": 0.938,
+        "total_expected_goals": 2.49,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.4796,
+        "over_2_5_goals": 0.4536,
+        "over_1_5_goals": 0.7106,
+        "home_win": 0.5168,
+        "draw": 0.2553,
+        "away_win": 0.2279
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
       "fixture_id": 564737,
       "home_team": "Villarreal CF",
       "away_team": "RCD Espanyol de Barcelona",
@@ -493,32 +519,6 @@
         "home_win": 0.4345,
         "draw": 0.2349,
         "away_win": 0.3306
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 564731,
-      "home_team": "RC Deportivo La Coru\u00f1a",
-      "away_team": "CA Osasuna",
-      "kickoff_utc": "2026-11-02T20:00:00Z",
-      "league": "La Liga",
-      "league_country": "Spain",
-      "model_lambdas": {
-        "home_expected_goals": 1.782,
-        "away_expected_goals": 1.15,
-        "total_expected_goals": 2.932,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.5684,
-        "over_2_5_goals": 0.5614,
-        "over_1_5_goals": 0.7905,
-        "home_win": 0.5217,
-        "draw": 0.233,
-        "away_win": 0.2453
       },
       "using_xg": false,
       "bets": [],
