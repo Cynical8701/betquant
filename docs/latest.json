@@ -1,36 +1,10 @@
 {
-  "generated_at": "2026-11-02T16:42:07.559877+00:00",
+  "generated_at": "2026-11-03T14:47:29.159588+00:00",
   "dry_run": false,
   "total_fixtures": 20,
   "total_tier1_bets": 0,
   "total_tier2_bets": 0,
   "fixtures": [
-    {
-      "fixture_id": 560622,
-      "home_team": "Newcastle United FC",
-      "away_team": "Everton FC",
-      "kickoff_utc": "2026-11-02T20:00:00Z",
-      "league": "Premier League",
-      "league_country": "England",
-      "model_lambdas": {
-        "home_expected_goals": 1.417,
-        "away_expected_goals": 1.375,
-        "total_expected_goals": 2.792,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.5661,
-        "over_2_5_goals": 0.5288,
-        "over_1_5_goals": 0.7676,
-        "home_win": 0.3831,
-        "draw": 0.2531,
-        "away_win": 0.3638
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
     {
       "fixture_id": 560634,
       "home_team": "Everton FC",
@@ -40,17 +14,17 @@
       "league_country": "England",
       "model_lambdas": {
         "home_expected_goals": 1.5,
-        "away_expected_goals": 1.062,
-        "total_expected_goals": 2.563,
+        "away_expected_goals": 1.0,
+        "total_expected_goals": 2.5,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.5084,
-        "over_2_5_goals": 0.4721,
-        "over_1_5_goals": 0.7253,
-        "home_win": 0.4731,
-        "draw": 0.2586,
-        "away_win": 0.2684
+        "btts_yes": 0.4911,
+        "over_2_5_goals": 0.4562,
+        "over_1_5_goals": 0.7127,
+        "home_win": 0.488,
+        "draw": 0.2598,
+        "away_win": 0.2522
       },
       "using_xg": false,
       "bets": [],
@@ -117,18 +91,18 @@
       "league": "Premier League",
       "league_country": "England",
       "model_lambdas": {
-        "home_expected_goals": 1.485,
-        "away_expected_goals": 1.361,
-        "total_expected_goals": 2.846,
+        "home_expected_goals": 1.44,
+        "away_expected_goals": 1.277,
+        "total_expected_goals": 2.718,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.5752,
-        "over_2_5_goals": 0.5414,
-        "over_1_5_goals": 0.7766,
-        "home_win": 0.4029,
-        "draw": 0.2499,
-        "away_win": 0.3471
+        "btts_yes": 0.5504,
+        "over_2_5_goals": 0.5107,
+        "over_1_5_goals": 0.7545,
+        "home_win": 0.4092,
+        "draw": 0.2562,
+        "away_win": 0.3346
       },
       "using_xg": false,
       "bets": [],
@@ -292,32 +266,6 @@
       "odds_available": false
     },
     {
-      "fixture_id": 564731,
-      "home_team": "RC Deportivo La Coru\u00f1a",
-      "away_team": "CA Osasuna",
-      "kickoff_utc": "2026-11-02T20:00:00Z",
-      "league": "La Liga",
-      "league_country": "Spain",
-      "model_lambdas": {
-        "home_expected_goals": 1.782,
-        "away_expected_goals": 1.15,
-        "total_expected_goals": 2.932,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.5684,
-        "over_2_5_goals": 0.5614,
-        "over_1_5_goals": 0.7905,
-        "home_win": 0.5217,
-        "draw": 0.233,
-        "away_win": 0.2453
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
       "fixture_id": 564740,
       "home_team": "Sevilla FC",
       "away_team": "Deportivo Alav\u00e9s",
@@ -378,17 +326,17 @@
       "league_country": "Spain",
       "model_lambdas": {
         "home_expected_goals": 1.242,
-        "away_expected_goals": 1.35,
-        "total_expected_goals": 2.592,
+        "away_expected_goals": 1.4,
+        "total_expected_goals": 2.642,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.5268,
-        "over_2_5_goals": 0.4796,
-        "over_1_5_goals": 0.7311,
-        "home_win": 0.3427,
-        "draw": 0.2639,
-        "away_win": 0.3934
+        "btts_yes": 0.5358,
+        "over_2_5_goals": 0.4921,
+        "over_1_5_goals": 0.7406,
+        "home_win": 0.333,
+        "draw": 0.2605,
+        "away_win": 0.4065
       },
       "using_xg": false,
       "bets": [],
@@ -403,18 +351,18 @@
       "league": "La Liga",
       "league_country": "Spain",
       "model_lambdas": {
-        "home_expected_goals": 1.08,
-        "away_expected_goals": 1.7,
-        "total_expected_goals": 2.78,
+        "home_expected_goals": 1.134,
+        "away_expected_goals": 1.8,
+        "total_expected_goals": 2.934,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.5398,
-        "over_2_5_goals": 0.5258,
-        "over_1_5_goals": 0.7655,
-        "home_win": 0.241,
-        "draw": 0.2402,
-        "away_win": 0.5187
+        "btts_yes": 0.5661,
+        "over_2_5_goals": 0.5619,
+        "over_1_5_goals": 0.7908,
+        "home_win": 0.2389,
+        "draw": 0.2314,
+        "away_win": 0.5296
       },
       "using_xg": false,
       "bets": [],
@@ -519,6 +467,58 @@
         "home_win": 0.4226,
         "draw": 0.2506,
         "away_win": 0.3268
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564747,
+      "home_team": "Villarreal CF",
+      "away_team": "Getafe CF",
+      "kickoff_utc": "2026-11-08T17:30:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 1.62,
+        "away_expected_goals": 1.15,
+        "total_expected_goals": 2.77,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.5481,
+        "over_2_5_goals": 0.5234,
+        "over_1_5_goals": 0.7638,
+        "home_win": 0.4829,
+        "draw": 0.2464,
+        "away_win": 0.2707
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 564746,
+      "home_team": "Club Atl\u00e9tico de Madrid",
+      "away_team": "FC Barcelona",
+      "kickoff_utc": "2026-11-08T20:00:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 1.89,
+        "away_expected_goals": 2.25,
+        "total_expected_goals": 4.14,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.7595,
+        "over_2_5_goals": 0.7817,
+        "over_1_5_goals": 0.9182,
+        "home_win": 0.3317,
+        "draw": 0.2004,
+        "away_win": 0.4679
       },
       "using_xg": false,
       "bets": [],
