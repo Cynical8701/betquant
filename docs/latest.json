@@ -1,62 +1,10 @@
 {
-  "generated_at": "2026-11-06T14:45:18.262648+00:00",
+  "generated_at": "2026-11-07T13:42:50.725484+00:00",
   "dry_run": false,
   "total_fixtures": 20,
   "total_tier1_bets": 0,
   "total_tier2_bets": 0,
   "fixtures": [
-    {
-      "fixture_id": 560634,
-      "home_team": "Everton FC",
-      "away_team": "Coventry City FC",
-      "kickoff_utc": "2026-11-06T20:00:00Z",
-      "league": "Premier League",
-      "league_country": "England",
-      "model_lambdas": {
-        "home_expected_goals": 1.5,
-        "away_expected_goals": 1.0,
-        "total_expected_goals": 2.5,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.4911,
-        "over_2_5_goals": 0.4562,
-        "over_1_5_goals": 0.7127,
-        "home_win": 0.488,
-        "draw": 0.2598,
-        "away_win": 0.2522
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 560632,
-      "home_team": "Leeds United FC",
-      "away_team": "Tottenham Hotspur FC",
-      "kickoff_utc": "2026-11-07T12:30:00Z",
-      "league": "Premier League",
-      "league_country": "England",
-      "model_lambdas": {
-        "home_expected_goals": 1.14,
-        "away_expected_goals": 1.0,
-        "total_expected_goals": 2.14,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.4299,
-        "over_2_5_goals": 0.3611,
-        "over_1_5_goals": 0.6305,
-        "home_win": 0.388,
-        "draw": 0.2952,
-        "away_win": 0.3168
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
     {
       "fixture_id": 560640,
       "home_team": "Arsenal FC",
@@ -117,18 +65,18 @@
       "league": "Premier League",
       "league_country": "England",
       "model_lambdas": {
-        "home_expected_goals": 1.512,
-        "away_expected_goals": 1.9,
-        "total_expected_goals": 3.412,
+        "home_expected_goals": 1.17,
+        "away_expected_goals": 1.917,
+        "total_expected_goals": 3.087,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.6629,
-        "over_2_5_goals": 0.6626,
-        "over_1_5_goals": 0.8545,
-        "home_win": 0.309,
-        "draw": 0.2218,
-        "away_win": 0.4692
+        "btts_yes": 0.5882,
+        "over_2_5_goals": 0.5959,
+        "over_1_5_goals": 0.8134,
+        "home_win": 0.2304,
+        "draw": 0.2219,
+        "away_win": 0.5477
       },
       "using_xg": false,
       "bets": [],
@@ -143,18 +91,18 @@
       "league": "Premier League",
       "league_country": "England",
       "model_lambdas": {
-        "home_expected_goals": 1.35,
-        "away_expected_goals": 2.117,
-        "total_expected_goals": 3.467,
+        "home_expected_goals": 1.242,
+        "away_expected_goals": 1.817,
+        "total_expected_goals": 3.058,
         "expected_cards": 3.6
       },
       "model_projections": {
-        "btts_yes": 0.6515,
-        "over_2_5_goals": 0.6729,
-        "over_1_5_goals": 0.8605,
-        "home_win": 0.2411,
-        "draw": 0.2085,
-        "away_win": 0.5504
+        "btts_yes": 0.5956,
+        "over_2_5_goals": 0.5898,
+        "over_1_5_goals": 0.8094,
+        "home_win": 0.2614,
+        "draw": 0.2299,
+        "away_win": 0.5087
       },
       "using_xg": false,
       "bets": [],
@@ -259,58 +207,6 @@
         "home_win": 0.2653,
         "draw": 0.22,
         "away_win": 0.5148
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 564740,
-      "home_team": "Sevilla FC",
-      "away_team": "Deportivo Alav\u00e9s",
-      "kickoff_utc": "2026-11-06T20:00:00Z",
-      "league": "La Liga",
-      "league_country": "Spain",
-      "model_lambdas": {
-        "home_expected_goals": 1.728,
-        "away_expected_goals": 1.5,
-        "total_expected_goals": 3.228,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.6389,
-        "over_2_5_goals": 0.6259,
-        "over_1_5_goals": 0.8324,
-        "home_win": 0.4326,
-        "draw": 0.2316,
-        "away_win": 0.3358
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 564744,
-      "home_team": "M\u00e1laga CF",
-      "away_team": "Real Racing Club de Santander",
-      "kickoff_utc": "2026-11-07T13:00:00Z",
-      "league": "La Liga",
-      "league_country": "Spain",
-      "model_lambdas": {
-        "home_expected_goals": 1.89,
-        "away_expected_goals": 1.6,
-        "total_expected_goals": 3.49,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.6775,
-        "over_2_5_goals": 0.6773,
-        "over_1_5_goals": 0.8631,
-        "home_win": 0.4489,
-        "draw": 0.2209,
-        "away_win": 0.3302
       },
       "using_xg": false,
       "bets": [],
@@ -519,6 +415,110 @@
         "home_win": 0.3258,
         "draw": 0.2059,
         "away_win": 0.4683
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 565848,
+      "home_team": "RB Leipzig",
+      "away_team": "FC Augsburg",
+      "kickoff_utc": "2026-11-07T14:30:00Z",
+      "league": "Bundesliga",
+      "league_country": "Germany",
+      "model_lambdas": {
+        "home_expected_goals": 2.255,
+        "away_expected_goals": 2.075,
+        "total_expected_goals": 4.33,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.7827,
+        "over_2_5_goals": 0.8063,
+        "over_1_5_goals": 0.9298,
+        "home_win": 0.4345,
+        "draw": 0.1976,
+        "away_win": 0.3678
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 565850,
+      "home_team": "Borussia Dortmund",
+      "away_team": "SV 07 Elversberg",
+      "kickoff_utc": "2026-11-07T14:30:00Z",
+      "league": "Bundesliga",
+      "league_country": "Germany",
+      "model_lambdas": {
+        "home_expected_goals": 1.944,
+        "away_expected_goals": 1.45,
+        "total_expected_goals": 3.394,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.6559,
+        "over_2_5_goals": 0.6591,
+        "over_1_5_goals": 0.8525,
+        "home_win": 0.4919,
+        "draw": 0.2199,
+        "away_win": 0.2882
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 565851,
+      "home_team": "1. FSV Mainz 05",
+      "away_team": "FC Bayern M\u00fcnchen",
+      "kickoff_utc": "2026-11-07T14:30:00Z",
+      "league": "Bundesliga",
+      "league_country": "Germany",
+      "model_lambdas": {
+        "home_expected_goals": 1.796,
+        "away_expected_goals": 2.763,
+        "total_expected_goals": 4.558,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.7813,
+        "over_2_5_goals": 0.8328,
+        "over_1_5_goals": 0.9417,
+        "home_win": 0.2412,
+        "draw": 0.176,
+        "away_win": 0.5828
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 565853,
+      "home_team": "SC Paderborn 07",
+      "away_team": "Eintracht Frankfurt",
+      "kickoff_utc": "2026-11-07T14:30:00Z",
+      "league": "Bundesliga",
+      "league_country": "Germany",
+      "model_lambdas": {
+        "home_expected_goals": 1.62,
+        "away_expected_goals": 1.375,
+        "total_expected_goals": 2.995,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.5993,
+        "over_2_5_goals": 0.5757,
+        "over_1_5_goals": 0.8001,
+        "home_win": 0.4332,
+        "draw": 0.2413,
+        "away_win": 0.3256
       },
       "using_xg": false,
       "bets": [],
