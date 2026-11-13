@@ -1,8 +1,61 @@
 {
-  "generated_at": "2026-11-12T15:38:15.880289+00:00",
+  "generated_at": "2026-11-13T14:57:13.292103+00:00",
   "dry_run": false,
-  "total_fixtures": 0,
+  "total_fixtures": 2,
   "total_tier1_bets": 0,
   "total_tier2_bets": 0,
-  "fixtures": []
+  "fixtures": [
+    {
+      "fixture_id": 564748,
+      "home_team": "Athletic Club",
+      "away_team": "RCD Espanyol de Barcelona",
+      "kickoff_utc": "2026-11-20T20:00:00Z",
+      "league": "La Liga",
+      "league_country": "Spain",
+      "model_lambdas": {
+        "home_expected_goals": 1.404,
+        "away_expected_goals": 0.85,
+        "total_expected_goals": 2.254,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.432,
+        "over_2_5_goals": 0.3917,
+        "over_1_5_goals": 0.6584,
+        "home_win": 0.4996,
+        "draw": 0.273,
+        "away_win": 0.2274
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
+      "fixture_id": 565859,
+      "home_team": "FC Bayern M\u00fcnchen",
+      "away_team": "1. FC K\u00f6ln",
+      "kickoff_utc": "2026-11-20T19:30:00Z",
+      "league": "Bundesliga",
+      "league_country": "Germany",
+      "model_lambdas": {
+        "home_expected_goals": 2.514,
+        "away_expected_goals": 1.206,
+        "total_expected_goals": 3.72,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.6438,
+        "over_2_5_goals": 0.7179,
+        "over_1_5_goals": 0.8856,
+        "home_win": 0.6585,
+        "draw": 0.1761,
+        "away_win": 0.1654
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    }
+  ]
 }
