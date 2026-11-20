@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T16:12:13.172021+00:00",
+  "generated_at": "2026-11-20T15:53:08.928201+00:00",
   "dry_run": false,
   "total_fixtures": 20,
   "total_tier1_bets": 0,
@@ -266,6 +266,32 @@
       "odds_available": false
     },
     {
+      "fixture_id": 560658,
+      "home_team": "Nottingham Forest FC",
+      "away_team": "Chelsea FC",
+      "kickoff_utc": "2026-11-27T20:00:00Z",
+      "league": "Premier League",
+      "league_country": "England",
+      "model_lambdas": {
+        "home_expected_goals": 1.35,
+        "away_expected_goals": 1.6,
+        "total_expected_goals": 2.95,
+        "expected_cards": 3.6
+      },
+      "model_projections": {
+        "btts_yes": 0.5912,
+        "over_2_5_goals": 0.5655,
+        "over_1_5_goals": 0.7933,
+        "home_win": 0.3231,
+        "draw": 0.2433,
+        "away_win": 0.4336
+      },
+      "using_xg": false,
+      "bets": [],
+      "builder": null,
+      "odds_available": false
+    },
+    {
       "fixture_id": 564748,
       "home_team": "Athletic Club",
       "away_team": "RCD Espanyol de Barcelona",
@@ -493,32 +519,6 @@
         "home_win": 0.1819,
         "draw": 0.2554,
         "away_win": 0.5627
-      },
-      "using_xg": false,
-      "bets": [],
-      "builder": null,
-      "odds_available": false
-    },
-    {
-      "fixture_id": 564757,
-      "home_team": "Levante UD",
-      "away_team": "Elche CF",
-      "kickoff_utc": "2026-11-23T20:00:00Z",
-      "league": "La Liga",
-      "league_country": "Spain",
-      "model_lambdas": {
-        "home_expected_goals": 1.62,
-        "away_expected_goals": 1.55,
-        "total_expected_goals": 3.17,
-        "expected_cards": 3.6
-      },
-      "model_projections": {
-        "btts_yes": 0.6319,
-        "over_2_5_goals": 0.6138,
-        "over_1_5_goals": 0.8248,
-        "home_win": 0.3973,
-        "draw": 0.2354,
-        "away_win": 0.3673
       },
       "using_xg": false,
       "bets": [],
